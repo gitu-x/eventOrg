@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party Planning & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            /* Light blue-gray background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .theme-header {
+            /* Fun and celebratory background suitable for birthdays */
+            background: linear-gradient(rgba(0, 150, 136, 0.6), rgba(76, 175, 80, 0.6)), url('birthday-party-bg.jpg') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #00bcd4;
+            /* Birthday accent color: Cyan/Teal */
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5em;
+            color: #00bcd4;
+            background-color: #e0f7fa;
+            /* Very light blue background */
+            border-bottom: 3px solid #0097a7;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #0097a7;
+            /* Heading Color */
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Celebrate in Style: Birthday Party Planning & Services</p>
+            <p>From kids' imaginative themes to elegant adult soirées, we plan and execute the perfect birthday
+                celebration for any age.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🎈</div>
+            <div class="content">
+                <h3>Theme Selection & Decor</h3>
+                <p><strong>Description:</strong> Complete theme conceptualization and decoration, including balloon
+                    arches, backdrops, and table settings.</p>
+                <p><strong>Key Elements:</strong> Custom Backdrops, Balloon Decorations, Character/Theme Props (e.g.,
+                    Disney, Superheroes), Color coordination, Table linens.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪄</div>
+            <div class="content">
+                <h3>Entertainment & Activities</h3>
+                <p><strong>Description:</strong> Engaging activities and performers to keep guests, especially children,
+                    entertained throughout the event.</p>
+                <p><strong>Key Elements:</strong> Magicians, Face Painting Artists, Game Coordinators, Bouncy
+                    Castles/Soft Play Areas, Music and Dance setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎂</div>
+            <div class="content">
+                <h3>Cake Table & Venue Setup</h3>
+                <p><strong>Description:</strong> Organizing the main celebration area, including the cake table
+                    presentation and seating arrangements.</p>
+                <p><strong>Key Elements:</strong> Customized Cake Table Display, Dessert/Candy Bar setup, Seating and
+                    Lounge areas, Marquee Letter/Number Lighting.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍕</div>
+            <div class="content">
+                <h3>Catering & Refreshments</h3>
+                <p><strong>Description:</strong> Planning a child-friendly or sophisticated adult menu, including
+                    appetizers, main course, and desserts.</p>
+                <p><strong>Key Elements:</strong> Customized Menu (Vegetarian/Non-Veg), Live Food Stations (e.g., Pasta,
+                    Chaat), Drink/Juice Counters, Waiter Service.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Photography & Keepsakes</h3>
+                <p><strong>Description:</strong> Capturing key moments like cake cutting, games, and guest interaction
+                    with high-quality media services.</p>
+                <p><strong>Key Elements:</strong> Event Photography, Photo Booth with Props, Instant Prints, Video
+                    Highlights Reel.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎁</div>
+            <div class="content">
+                <h3>Return Gifts & Favors</h3>
+                <p><strong>Description:</strong> Sourcing and packing age-appropriate and thematic return gifts for all
+                    attending children or party favors for adults.</p>
+                <p><strong>Key Elements:</strong> Gift Selection and Customization, Packaging and Presentation,
+                    Distribution Coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🔊</div>
+            <div class="content">
+                <h3>Technical Infrastructure</h3>
+                <p><strong>Description:</strong> Ensuring all technical needs for music, visuals, and announcements are
+                    handled smoothly.</p>
+                <p><strong>Key Elements:</strong> Sound System (Speakers, Mic), Lighting (Ambient, Disco, LED),
+                    Projector/Display Screens, Power management.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">👨‍👩‍👧‍👦</div>
+            <div class="content">
+                <h3>Staff & Guest Management</h3>
+                <p><strong>Description:</strong> Providing support staff to ensure the event runs smoothly and guests
+                    are attended to.</p>
+                <p><strong>Key Elements:</strong> Ushers/Hostesses, Cleaners, Security (if required), Dedicated
+                    Coordinator for the birthday child/adult.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Birthday Party Planning & Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

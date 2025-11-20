@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Seating Arrangements</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f3;
+            color: #4a4a4a;
+        }
+
+        /* Header Styling - Inspired by the EventOrg banner */
+        .venue-header {
+            /* Placeholder image, replace with 'pt9.jpg' if available */
+            background: url('pt10.jpg') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Pseudo-element for the blurred background */
+        .venue-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(5px);
+            z-index: 0;
+        }
+
+        .venue-header>div {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .m1 {
+            color: white;
+            text-shadow:
+                1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .venue-header p:not(.m1) {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+
+        /* Venue Container (Grid Layout) */
+        .venue-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Venue Box Styling */
+        .venue-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .venue-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image Placeholder Styling */
+        .image-placeholder {
+            height: 180px;
+            background: linear-gradient(to bottom right, #fdd835, #ffb300);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #795548;
+            font-weight: bold;
+            border-bottom: 5px solid #ff8f00;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Icon Styling */
+        .seating-icon {
+            font-size: 4em;
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #b06e2e;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #6d6d6d;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .venue-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .venue-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .venue-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="venue-header">
+        <div>
+            <p class="m1">Venue Seating Arrangements</p>
+            <p>Choose the right seating layout for a successful event.</p>
+        </div>
+    </section>
+
+    <div class="venue-container">
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🪑🪑🪑</span>
+                Theatre Style
+            </div>
+            <div class="content">
+                <h3>Theatre Style</h3>
+                <p>Best for **viewing and listening** only. Chairs are lined up facing one direction. (Ideal for large
+                    presentations, lectures)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">💻📝🪑</span>
+                Classroom Style
+            </div>
+            <div class="content">
+                <h3>Classroom Style</h3>
+                <p>Ideal for training and seminars where attendees need to **take notes** or use laptops. A table is
+                    provided for each seat.</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🍽️🗣️</span>
+                Banquet Style
+            </div>
+            <div class="content">
+                <h3>Banquet Style</h3>
+                <p>Round tables best for **social interaction** and meals. (Perfect for wedding receptions and gala
+                    dinners).</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🔄🤝</span>
+                U-Shape / Horseshoe
+            </div>
+            <div class="content">
+                <h3>U-Shape / Horseshoe</h3>
+                <p>Great for **group discussion** and direct interaction with the speaker. The open end faces the
+                    presentation area. (For workshops, training sessions)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">💼🧑‍💼</span>
+                Boardroom Style
+            </div>
+            <div class="content">
+                <h3>Boardroom Style</h3>
+                <p>A single long table, ideal for **formal meetings** and decision-making. (For executive meetings,
+                    high-level discussions).</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🌓📺</span>
+                Cabaret Style
+            </div>
+            <div class="content">
+                <h3>Cabaret / Crescent Style</h3>
+                <p>Similar to Banquet, but all chairs face the **stage area**. Good for both discussion and presentation
+                    viewing. (For award shows, working lunches)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🔲💡</span>
+                Hollow Square
+            </div>
+            <div class="content">
+                <h3>Hollow Square</h3>
+                <p>Tables in a square shape with an empty space in the middle. Excellent for **equal discussion** and
+                    small group work. (For brainstorming sessions).</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">
+                <span class="seating-icon">🥂🚶</span>
+                Cocktail Style
+            </div>
+            <div class="content">
+                <h3>Cocktail Style</h3>
+                <p>High tables and stools, designed for **networking** and standing/mingling. (Suitable for receptions,
+                    product launches).</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Hotel Venue Seating Arrangements page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Movement & Event Logistics Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9;
+            /* Light green/mint background (Logistics/Efficiency theme) */
+            color: #2e7d32;
+            /* Deep green text */
+        }
+
+        /* Header Styling */
+        .logistics-header {
+            background: linear-gradient(135deg, #66bb6a, #2e7d32);
+            /* Mid to deep green gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logistics-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Logistics Component Container (Grid Layout) */
+        .logistics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Logistics Component Box Styling */
+        .logistics-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #66bb6a;
+            /* Accent color */
+        }
+
+        .logistics-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .logistics-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #a5d6a7;
+            /* Medium green accent */
+            border-bottom: 3px solid #66bb6a;
+        }
+
+        .logistics-visual.inventory {
+            background-color: #ffb300;
+        }
+
+        /* Inventory - Amber */
+        .logistics-visual.access {
+            background-color: #e57373;
+        }
+
+        /* Access - Red */
+        .logistics-visual.schedule {
+            background-color: #4fc3f7;
+        }
+
+        /* Schedule - Light Blue */
+        .logistics-visual.bofh {
+            background-color: #90a4ae;
+        }
+
+        /* BOH - Grey */
+        .logistics-visual.vehicles {
+            background-color: #ab47bc;
+        }
+
+        /* Vehicles - Purple */
+        .logistics-visual.manpower {
+            background-color: #00bcd4;
+        }
+
+        /* Manpower - Cyan */
+        .logistics-visual.floor {
+            background-color: #795548;
+        }
+
+        /* Floor Protection - Brown */
+        .logistics-visual.teardown {
+            background-color: #ff9800;
+        }
+
+        /* Teardown - Orange */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .logistics-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logistics-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="logistics-header">
+        <div>
+            <p class="m1">Material Movement & Event Logistics Planning</p>
+            <p>Efficient management of equipment, décor, and catering supplies during setup, event, and teardown phases.
+            </p>
+        </div>
+    </section>
+
+    <div class="logistics-container">
+
+        <div class="logistics-box">
+            <div class="logistics-visual inventory">📝</div>
+            <div class="content">
+                <h3>Detailed Inventory & Checklist</h3>
+                <p>**Crucial:** Create a master list of **every single item** coming into the venue (decor, sound gear,
+                    furniture, catering boxes). Use labels and numbering for easy identification.</p>
+                <p>**Goal:** Prevents loss, damage, and ensures nothing is forgotten during teardown.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual access">🚚</div>
+            <div class="content">
+                <h3>Venue Access Points & Docks</h3>
+                <p>**Planning:** Identify the **best loading dock, cargo elevator, or ramp** for large deliveries.
+                    Confirm size and weight limits for elevators/entrances.</p>
+                <p>**Coordination:** Communicate specific delivery slots to all vendors to prevent bottlenecks at the
+                    dock.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual schedule">🗓️</div>
+            <div class="content">
+                <h3>Movement Schedule (In & Out)</h3>
+                <p>**Timeline:** Create a **Staggered Setup Schedule** (e.g., Heavy equipment first, then Decor, then
+                    Catering). Reverse the schedule exactly for teardown.</p>
+                <p>**Safety:** Do not allow multiple vendors to load/unload heavy items simultaneously in the same
+                    narrow area.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual manpower">💪</div>
+            <div class="content">
+                <h3>Handling Manpower & Equipment</h3>
+                <p>**Staffing:** Assign dedicated **BOH (Back of House) Logistics Staff** to manage receiving and
+                    dispatching goods.</p>
+                <p>**Tools:** Ensure availability of necessary equipment: **Pallet jacks, trollies, heavy-duty hand
+                    trucks**, and reliable communication (radios).</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual vehicles">🚛</div>
+            <div class="content">
+                <h3>Vehicle Registration & Parking</h3>
+                <p>**Protocol:** Pre-register all vendor vehicles (trucks, vans) and provide them with **temporary
+                    access passes** for loading zones and staging areas.</p>
+                <p>**Duration:** Enforce strict time limits (e.g., 30 minutes) for vehicles at the loading dock to keep
+                    the line moving.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual floor">⚠️</div>
+            <div class="content">
+                <h3>Venue Protection & Safety</h3>
+                <p>**Mandatory:** Use **protective mats, plywood sheets, or cardboard** on carpets and sensitive
+                    flooring along all major movement routes to prevent damage from heavy traffic.</p>
+                <p>**Security:** Ensure all high-value items are under watch or immediately secured upon arrival.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual boch">📦</div>
+            <div class="content">
+                <h3>Back of House (BOH) Staging Area</h3>
+                <p>**Planning:** Designate a secure, organized area for temporary storage and unpacking/packing. Use
+                    **color-coded zones** for different departments (A/V, Decor, F&B).</p>
+                <p>**Tidiness:** Maintain a clear walkway in the BOH area at all times for staff safety.</p>
+            </div>
+        </div>
+
+        <div class="logistics-box">
+            <div class="logistics-visual teardown">📉</div>
+            <div class="content">
+                <h3>Reverse Logistics (Teardown)</h3>
+                <p>**Speed:** Teardown is usually time-critical. The process must be **faster and more structured** than
+                    the setup. All boxes and crates must be pre-labeled.</p>
+                <p>**Final Check:** Do a final "sweep" check of the venue using the initial inventory list before the
+                    last vendor leaves.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Material Movement & Event Logistics Planning page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

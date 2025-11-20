@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Reset and Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            /* Changed font to match sign-up page */
+        }
+
+        body {
+            /* Background from Sign-up Page Theme */
+            background-image: url('../pt2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Main Container Styling */
+        .profile-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.95);
+            /* Slightly opaque white */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+        }
+
+        /* Header Styling (Avatar and Name) */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f98b00;
+            /* Orange underline */
+        }
+
+        .user-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #f98b00;
+            /* Orange avatar background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .profile-header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Form Section Styling */
+        .form-section {
+            margin-bottom: 25px;
+        }
+
+        .form-section h2 {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #f98b00;
+            /* Orange Section Header */
+            margin-bottom: 15px;
+            padding-top: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #eee;
+            margin: 20px 0;
+        }
+
+        /* Form Fields Layout (Two columns) */
+        .form-group-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .form-field {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .form-field label {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #f98b00;
+            /* Orange focus color */
+        }
+
+        /* Read-only fields styling */
+        input[readonly],
+        select[readonly] {
+            background-color: #f8f8f8;
+            cursor: default;
+        }
+
+        /* Input Display with Edit Button (for Account Details) */
+        .input-display-with-edit {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .input-display-with-edit .value {
+            color: #155724;
+            /* Dark Green for Verified Info */
+            font-weight: 500;
+        }
+
+        .input-display-with-edit .value.username {
+            color: #f98b00;
+            /* Orange for Username */
+            font-weight: 500;
+        }
+
+
+        .edit-btn {
+            color: #ff007b;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        /* Birthday Icon Styling */
+        .input-icon-right {
+            position: absolute;
+            right: 10px;
+            top: 32px;
+            pointer-events: none;
+        }
+
+        /* Select element styling */
+        select {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s;
+            background-color: #fff;
+            height: 40px;
+            /* Match input height */
+        }
+
+        /* Save Changes Button */
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .save-btn {
+            padding: 12px 30px;
+            background-color: #f98b00;
+            /* Orange Save button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #e57d00;
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: right;
+            font-size: 0.7em;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .footer-note a {
+            color: #ff007b;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 650px) {
+            .form-group-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .profile-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <div class="user-avatar">{{first_name_initial}}</div>
+            <h1>{{first_name}} {{last_name}}</h1>
+        </header>
+
+        <form class="profile-form" onsubmit="saveProfile(event)">
+            <section class="form-section">
+                <h2>Account & Contact Details</h2>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="mobile">Mobile Number</label>
+                        <div class="input-display-with-edit">
+                            <span class="value">{{phone_number}}</span>
+                            <a href="#" class="edit-btn">Edit</a>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="username">Username</label>
+                        <div class="input-display-with-edit">
+                            <span class="value username">{{username}}@event.org</span>
+                            <a href="#" class="edit-btn">Edit</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="id-proof">Aadhaar or License Number</label>
+                        <input type="text" id="id-proof" value="{{id_proof}}" readonly>
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <div class="input-display-with-edit">
+                            <span class="value">********</span>
+                            <a href="#" class="edit-btn">Change</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="form-section">
+                <h2>Personal Details</h2>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" value="{{first_name}}">
+                    </div>
+                    <div class="form-field">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" value="{{last_name}}">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="dob">Birthday (Date of Birth)</label>
+                        <input type="text" id="dob" value="{{date_of_birth}}" readonly>
+                        <span class="input-icon-right">📅</span>
+                    </div>
+                    <div class="form-field">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" value="{{gender}}" readonly>
+                    </div>
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section class="form-section">
+                <h2>Residential Address</h2>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="address-line1">Flat, House No., Apartment</label>
+                        <input type="text" id="address-line1" value="{{address_line1}}">
+                    </div>
+                    <div class="form-field">
+                        <label for="address-line2">Area, Street, Sector, Village</label>
+                        <input type="text" id="address-line2" value="{{address_line2}}">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="landmark">Landmark (Optional)</label>
+                        <input type="text" id="landmark" value="{{landmark}}">
+                    </div>
+                    <div class="form-field">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" value="{{pincode}}">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="city">Town/City</label>
+                        <input type="text" id="city" value="{{city}}">
+                    </div>
+                    <div class="form-field">
+                        <label for="state">State</label>
+                        <input type="text" id="state" value="{{state}}" readonly>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+
+            <p class="footer-note">By pressing Save Changes, you agree to our <a href="#">Terms & Conditions</a> and <a
+                    href="#">Privacy Policy</a>.</p>
+        </form>
+    </div>
+
+    <script>
+        /**
+         * 'Save Changes' button पर क्लिक होने पर चलती है और user को /list page पर भेजती है।
+         */
+        function saveProfile(event) {
+            // 1. Default form submission (जो पेज को रीलोड करता है) को रोकें।
+            event.preventDefault();
+
+            // NOTE: एक वास्तविक एप्लिकेशन में, आप यहाँ fetch() API का उपयोग करके
+            // अपडेटेड डेटा को Rust Axum सर्वर पर (जैसे /profile/update POST request) भेजेंगे।
+            // सर्वर से सफलता (200 OK) मिलने के बाद ही रीडायरेक्ट किया जाएगा।
+
+            // 2. सफलता का एक संदेश दिखाएँ (Optional)
+            // alert("Profile changes saved successfully!");
+
+            // 3. User को /list पेज पर रीडायरेक्ट करें (जैसा कि main.rs में कॉन्फ़िगर किया गया है)
+            window.location.href = '/list';
+        }
+    </script>
+</body>
+
+</html>

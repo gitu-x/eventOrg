@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Event & Concert Management Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6fc;
+            /* Very light blue/grey background */
+            color: #333;
+        }
+
+        /* Color Palette: #007bff (Deep Blue), #ffc107 (Yellow/Gold), #28a745 (Green for text/accent) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('music-concert-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a concert stage/crowd background image */
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffc107;
+            /* Yellow/Gold text */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 70px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #007bff;
+            /* Deep Blue accent */
+        }
+
+        .service-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.2em;
+            color: #007bff;
+            /* Blue icon color */
+            background-color: #e8f0ff;
+            /* Very light blue background */
+            border-bottom: 2px solid #ffc107;
+            /* Yellow accent */
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #28a745;
+            /* Heading Color - Green for contrast */
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Concert & Music Festival Event Services</p>
+            <p>From Arena Lighting to Backstage Management: We provide complete, professional event solutions for
+                live musical performances.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🎸</div>
+            <div class="content">
+                <h3>Stage & Backline Setup</h3>
+                <p><strong>Description:</strong> Designing and constructing a professional, robust stage suitable for
+                    heavy-duty musical performances and equipment.</p>
+                <p><strong>Key Elements:</strong> Main Stage Build (trussing, roofing), **Backline Equipment Rental**
+                    (Amps, Drums, Keys), Risers, Technical crew access, VIP viewing platforms.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🔊</div>
+            <div class="content">
+                <h3>Professional Audio & PA System</h3>
+                <p><strong>Description:</strong> Delivering crystal-clear, high-volume sound coverage across the entire
+                    venue for an immersive audience experience.</p>
+                <p><strong>Key Elements:</strong> Line Array Speaker System, **Front-of-House (FoH) & Monitor Mixing**,
+                    Microphones and DI boxes, Audio Engineers, Acoustic testing and tuning.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Theatrical Lighting & Visuals (VFX)</h3>
+                <p><strong>Description:</strong> Creating a dynamic atmosphere with professional concert lighting, haze,
+                    and stunning LED screen visuals.</p>
+                <p><strong>Key Elements:</strong> Intelligent Lighting (Moving Heads, Lasers), **LED Video Wall /
+                    Screen Management**, Smoke/Haze machines, Lighting Programmer/Operator.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎫</div>
+            <div class="content">
+                <h3>Ticketing & Access Control</h3>
+                <p><strong>Description:</strong> Managing entry/exit, ticket validation, and wristband distribution for
+                    a smooth, secure attendee flow.</p>
+                <p><strong>Key Elements:</strong> E-ticketing integration, **High-speed turnstiles / Scanning Points**,
+                    Box office setup, VIP/Media check-in areas, Access credentials management.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🛡️</div>
+            <div class="content">
+                <h3>Event Security & Crowd Management</h3>
+                <p><strong>Description:</strong> Ensuring the safety of the artists and audience with professional
+                    security personnel and emergency planning.</p>
+                <p><strong>Key Elements:</strong> **Trained Security Guards / Bouncers**, Artist protection (Baton),
+                    Crowd barriers (Barricades), Emergency medical services (Ambulance), Fire safety protocols.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍸</div>
+            <div class="content">
+                <h3>F&B & Vendor Coordination</h3>
+                <p><strong>Description:</strong> Organizing food stalls, beverage stations, and coordinating with all
+                    on-site vendors.</p>
+                <p><strong>Key Elements:</strong> Food stall layout design, Beverage licensing & logistics, **Artist
+                    Rider fulfillment and catering**, Waste management, Power supply for vendors.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Professional Media & Documentation</h3>
+                <p><strong>Description:</strong> Capturing the high energy of the event through multi-angle photography
+                    and videography for promotion.</p>
+                <p><strong>Key Elements:</strong> Multi-camera live-switch production, **Post-event highlight video
+                    editing**, Drone coverage (where permitted), Photo pit management, Media access passes.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🅿️</div>
+            <div class="content">
+                <h3>Site Logistics & Parking</h3>
+                <p><strong>Description:</strong> Planning the overall site layout, including vehicle flow, artist
+                    transport, and large-scale parking solutions.</p>
+                <p><strong>Key Elements:</strong> Traffic flow management, **Designated large-scale parking areas**,
+                    Artist/Equipment loading and unloading zones, Generator & Power Distribution.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Music Event & Concert Management Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

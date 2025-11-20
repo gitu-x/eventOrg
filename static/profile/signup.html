@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organization Sign Up</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Google Style Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            /* Updated Background Styles for Event Theme */
+            background-image: url('../pt2.jpg');
+            /* <<-- यहाँ अपनी इमेज का URL डालें -->> */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f8f9fa;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 48px 40px 36px 40px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+            transition: all 0.3s ease;
+        }
+
+        /* Header/Logo Style */
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #3c4043;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #5f6368;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            font-size: 36px;
+            font-weight: 400;
+            color: #5f6368;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo .event-part {
+            color: #f98b00;
+            font-weight: 500;
+        }
+
+        .logo .org-part {
+            color: #5f6368;
+            font-weight: 400;
+        }
+
+        /* Form Input Styling (Material Design look) */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.3s;
+            background-color: #fff;
+        }
+
+        .input-field:focus {
+            border-color: #f98b00;
+            border-width: 2px;
+            padding: 14px;
+        }
+
+        /* Floating Label Effect for all fields - This ensures persistence */
+        .input-field:focus+label,
+        .input-field:valid+label,
+        .input-field:not(:placeholder-shown)+label,
+        select.input-field:valid+label,
+        select.input-field:focus+label,
+        select.input-field:not(:checked)+label {
+            top: -10px;
+            font-size: 12px;
+            color: #f98b00;
+            background: #fff;
+            padding: 0 5px;
+        }
+
+        label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #80868b;
+            font-size: 16px;
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+
+
+        .error-message {
+            color: #d93025;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* Button Styling */
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .submit-button {
+            background-color: #f98b00;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #e57d00;
+        }
+
+        /* Specific elements */
+        #username-preview {
+            font-weight: bold;
+            color: #f98b00;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Style fix for Select dropdown arrow visibility */
+        select.input-field {
+            appearance: menulist-button;
+            /* Ensure native dropdown button/arrow is visible */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="header">
+            <div class="logo"><span class="event-part">Event</span><span class="org-part">Organization</span></div>
+            <h1>Create Your Account</h1>
+            <p>Fill out the form below to register for event services.</p>
+        </div>
+
+        <form id="signup-form">
+
+            <div class="form-group">
+                <input type="text" id="first-name" class="input-field" required name="first_name" placeholder=" "
+                    value="">
+                <label for="first-name">First name</label>
+                <span id="first-name-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="last-name" class="input-field" required name="last_name" placeholder=" "
+                    value="">
+                <label for="last-name">Last name</label>
+                <span id="last-name-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="dob" class="input-field" required name="dob" value="">
+                <label for="dob">Date of Birth</label>
+                <span id="dob-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <select id="gender" class="input-field" required name="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="gender">Gender</label>
+                <span id="gender-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="username" class="input-field" required name="username"
+                    onkeyup="updateUsernamePreview(this.value)" placeholder=" " value="">
+                <label for="username">Username</label>
+            </div>
+            <span id="username-preview">@event.org</span>
+            <span id="username-error" class="error-message"></span>
+
+            <div class="form-group">
+                <input type="password" id="password" class="input-field" required name="password" placeholder=" "
+                    value="">
+                <label for="password">Password (Min 8 characters)</label>
+                <span id="password-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" class="input-field" required placeholder=" " value="">
+                <label for="confirm-password">Confirm Password</label>
+                <span id="confirm-password-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="phone-number" class="input-field" required name="phone_number" placeholder=" "
+                    value="">
+                <label for="phone-number">Phone Number</label>
+                <span id="phone-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="id-proof" class="input-field" required name="id_proof" placeholder=" " value="">
+                <label for="id-proof">Aadhaar or License Number</label>
+                <span id="id-proof-error" class="error-message"></span>
+            </div>
+
+            <h2 style="font-size: 18px; margin-top: 20px; margin-bottom: 15px; color: #3c4043;">Residential Address</h2>
+
+            <div class="form-group">
+                <input type="text" id="address-line1" class="input-field" required name="address_line1" placeholder=" "
+                    value="">
+                <label for="address-line1">Flat, House No., Company, Apartment</label>
+                <span id="address-line1-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="address-line2" class="input-field" required name="address_line2" placeholder=" "
+                    value="">
+                <label for="address-line2">Area, Street, Sector, Village</label>
+                <span id="address-line2-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="landmark" class="input-field" name="landmark" placeholder=" " value="">
+                <label for="landmark">Landmark (Optional)</label>
+                <span id="landmark-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="pincode" class="input-field" required name="pincode" placeholder=" " value="">
+                <label for="pincode">Pincode</label>
+                <span id="pincode-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="city" class="input-field" required name="city" placeholder=" " value="">
+                <label for="city">Town/City</label>
+                <span id="city-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <select id="state" class="input-field" required name="state">
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands (UT)</option>
+                    <option value="Chandigarh">Chandigarh (UT)</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu
+                        (UT)</option>
+                    <option value="Delhi">Delhi (NCT)</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir (UT)</option>
+                    <option value="Ladakh">Ladakh (UT)</option>
+                    <option value="Lakshadweep">Lakshadweep (UT)</option>
+                    <option value="Puducherry">Puducherry (UT)</option>
+                </select>
+                <label for="state">State</label>
+                <span id="state-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group" style="margin-top: 40px;">
+                <input type="checkbox" id="agree-terms" style="vertical-align: middle;">
+                <label for="agree-terms"
+                    style="position: static; color: #3c4043; font-size: 14px; margin-left: 10px; display: inline-block; vertical-align: middle;">I
+                    agree to the terms and conditions.</label>
+                <span id="terms-error" class="error-message" style="display:block;"></span>
+            </div>
+
+            <div class="button-container">
+                <button class="submit-button" type="submit" onclick="return validateForm(event)">Create Account</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUsernamePreview(document.getElementById('username').value);
+        });
+
+        // --- Helper Functions (Same as before) ---
+        window.updateUsernamePreview = (value) => {
+            const preview = document.getElementById('username-preview');
+            if (preview) {
+                preview.textContent = value ? `${value}@event.org` : `@event.org`;
+            }
+        };
+
+        const showError = (id, message) => {
+            const errorElement = document.getElementById(id);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+
+            const errorField = document.getElementById(id.replace('-error', ''));
+            if (errorField) {
+                // Focus the field and scroll into view for better UX
+                errorField.focus();
+                errorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            return false;
+        };
+
+        const clearError = (id) => {
+            const errorElement = document.getElementById(id);
+            errorElement.style.display = 'none';
+            return true;
+        };
+
+        // --- Master Validation and Submission Function ---
+        window.validateForm = (event) => {
+            event.preventDefault(); // फॉर्म सबमिशन रोकें
+
+            let isValid = true;
+
+            // सारे Validation Checks (क्रम को बनाए रखने के लिए अंतिम से शुरू, ताकि पहला error ऊपर दिखे)
+            const state = document.getElementById('state').value;
+            if (state === '') { isValid = showError('state-error', 'Please select your State/UT.') && isValid; } else { clearError('state-error'); }
+
+            const city = document.getElementById('city').value.trim();
+            if (city.length < 2) { isValid = showError('city-error', 'Town/City is required.') && isValid; } else { clearError('city-error'); }
+
+            const pincode = document.getElementById('pincode').value.trim();
+            if (pincode.length !== 6 || isNaN(pincode)) { isValid = showError('pincode-error', 'Please enter a valid 6-digit Pincode.') && isValid; } else { clearError('pincode-error'); }
+
+            const landmark = document.getElementById('landmark').value.trim();
+            clearError('landmark-error');
+
+
+            const addressLine2 = document.getElementById('address-line2').value.trim();
+            if (addressLine2.length < 5) { isValid = showError('address-line2-error', 'Area/Street/Sector details are required.') && isValid; } else { clearError('address-line2-error'); }
+
+            const addressLine1 = document.getElementById('address-line1').value.trim();
+            if (addressLine1.length < 3) { isValid = showError('address-line1-error', 'Flat/House No. details are required.') && isValid; } else { clearError('address-line1-error'); }
+
+            const agree = document.getElementById('agree-terms').checked;
+            if (!agree) { isValid = showError('terms-error', 'You must agree to the terms to create the account.') && isValid; } else { clearError('terms-error'); }
+
+            const idProof = document.getElementById('id-proof').value.trim();
+            if (idProof.length < 6) { isValid = showError('id-proof-error', 'A valid Aadhaar or License number is required (min 6 characters).') && isValid; } else { clearError('id-proof-error'); }
+
+            const phone = document.getElementById('phone-number').value.trim();
+            if (phone.length < 10 || isNaN(phone)) { isValid = showError('phone-error', 'Please enter a valid 10-digit phone number.') && isValid; } else { clearError('phone-error'); }
+
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+            if (password.length < 8) { isValid = showError('password-error', 'Password must be at least 8 characters long.') && isValid; } else { clearError('password-error'); }
+
+            if (password !== confirmPassword) { isValid = showError('confirm-password-error', 'Passwords do not match.') && isValid; } else { clearError('confirm-password-error'); }
+
+            const username = document.getElementById('username').value.trim();
+            if (username.length < 5 || !/^[a-zA-Z0-9]+$/.test(username)) { isValid = showError('username-error', 'Username must be 5+ characters and contain only letters and numbers.') && isValid; } else { clearError('username-error'); }
+
+            const gender = document.getElementById('gender').value;
+            if (gender === '') { isValid = showError('gender-error', 'Gender is required.') && isValid; } else { clearError('gender-error'); }
+
+            const dob = document.getElementById('dob').value.trim();
+            if (dob === '') { isValid = showError('dob-error', 'Date of Birth is required.') && isValid; } else { clearError('dob-error'); }
+
+            const lastName = document.getElementById('last-name').value.trim();
+            if (lastName === '') { isValid = showError('last-name-error', 'Last name is required.') && isValid; } else { clearError('last-name-error'); }
+
+            const firstName = document.getElementById('first-name').value.trim();
+            if (firstName === '') { isValid = showError('first-name-error', 'First name is required.') && isValid; } else { clearError('first-name-error'); }
+
+
+            if (isValid) {
+                // Address field values
+                const addressLine1 = document.getElementById('address-line1').value.trim();
+                const addressLine2 = document.getElementById('address-line2').value.trim();
+                const landmark = document.getElementById('landmark').value.trim();
+                const pincode = document.getElementById('pincode').value.trim();
+                const city = document.getElementById('city').value.trim();
+                // State value is already 'state' variable
+
+                // FIX: Send 6 separate address fields to match the updated Rust Struct
+                const mappedData = {
+                    first_name: firstName,
+                    last_name: lastName,
+                    dob: dob,
+                    gender: gender,
+                    username: username,
+                    password: password,
+                    phone_number: phone,
+                    id_proof: idProof,
+
+                    // CRITICAL FIX: Sending separate fields
+                    address_line1: addressLine1,
+                    address_line2: addressLine2,
+                    landmark: landmark,
+                    pincode: pincode,
+                    city: city,
+                    state: state,
+                };
+
+                const formBody = new URLSearchParams(mappedData).toString();
+
+                // Final Submission to Axum
+                fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: formBody,
+                })
+                    .then(response => {
+                        // Axum का signup_handler successful होने पर 302 Redirect (/login पर) देता है।
+                        if (response.status === 302) {
+                            // Server is redirecting (e.g., to /login), follow the redirect
+                            alert(`Account Created Successfully! Welcome, ${firstName}! You will be redirected to the login page.`);
+                            window.location.href = response.headers.get('Location') || '/login';
+                        } else if (response.ok) {
+                            // Fallback for 200 OK
+                            alert(`Account Created Successfully! Welcome, ${firstName}!`);
+                            window.location.href = '/login';
+                        } else {
+                            // Error handling (400 Bad Request or 500 Internal Error)
+                            response.text().then(text => {
+                                alert(`Account creation failed. HTTP Status: ${response.status}. Server Response: ${text.substring(0, 100)}`);
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Network or Fetch Error:', error);
+                        alert('A network error occurred during submission. Check if the server is running on the correct port.');
+                    });
+            }
+
+            return false;
+        };
+    </script>
+</body>
+
+</html>

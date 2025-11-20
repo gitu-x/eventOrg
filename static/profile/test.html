@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Resets and Body Styling - Event Theme */
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Background from Sign-up Page Theme */
+            background-image: url('../pt2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align to top */
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Ensures no content overflows rounded corners */
+        }
+
+        /* Header Section Styling (Hey! & Profile Icon) */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 20px;
+            background-color: #f98b00;
+            /* Orange background */
+            color: white;
+        }
+
+        .user-info h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .edit-profile {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            /* Lighter white for link */
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .profile-icon .fas {
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.9);
+            /* White icon */
+        }
+
+        /* Menu List Styling */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.2s;
+        }
+
+        .menu-item a:hover {
+            background-color: #fff9f0;
+            /* Light orange hover effect */
+        }
+
+        /* Icon and Text Alignment */
+        .icon-text-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-text-group .fas,
+        .icon-text-group .far {
+            font-size: 18px;
+            color: #f98b00;
+            /* Orange icon color */
+            width: 30px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .main-text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 2px;
+            color: #3c4043;
+        }
+
+        .sub-text {
+            font-size: 12px;
+            color: #80868b;
+        }
+
+        .arrow-icon {
+            font-size: 14px;
+            color: #dadce0;
+        }
+
+        /* Sign Out Section Styling */
+        .signout-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Log In/Sign Out Button */
+        .signout-button {
+            width: 100%;
+            padding: 12px;
+            background-color: white;
+            color: #f98b00;
+            /* Orange text */
+            border: 2px solid #f98b00;
+            /* Orange border */
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .signout-button:hover {
+            background-color: #f98b00;
+            /* Orange background on hover */
+            color: white;
+        }
+
+        .signout-button a {
+            text-decoration: none;
+            color: inherit;
+            /* Inherit color from button */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <div class="header-section">
+            <div class="user-info">
+                <h1>Hey!</h1>
+                <p><a href="./profile.html" class="edit-profile">Show Profile & Edit Details ></a></p>
+            </div>
+            <div class="profile-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+
+        <ul class="menu-list">
+
+            <li class="menu-item">
+                <a href="#">
+                    <div class="icon-text-group">
+                        <i class="far fa-bell"></i>
+                        <div class="text-content">
+                            <span class="main-text">Notifications</span>
+                            <span class="sub-text">Updates and Alerts</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">
+                    <div class="icon-text-group">
+                        <i class="fas fa-ticket-alt"></i>
+                        <div class="text-content">
+                            <span class="main-text">My Bookings</span>
+                            <span class="sub-text">View all your tickets and orders</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">
+                    <div class="icon-text-group">
+                        <i class="far fa-credit-card"></i>
+                        <div class="text-content">
+                            <span class="main-text">Payment Methods</span>
+                            <span class="sub-text">View saved cards and transaction history</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">
+                    <div class="icon-text-group">
+                        <i class="fas fa-cog"></i>
+                        <div class="text-content">
+                            <span class="main-text">Settings</span>
+                            <span class="sub-text">Manage preferences and security</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">
+                    <div class="icon-text-group">
+                        <i class="far fa-comment-alt"></i>
+                        <div class="text-content">
+                            <span class="main-text">Help & Support</span>
+                            <span class="sub-text">FAQs, Contact Us, and Chat</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="signout-section">
+            <button class="signout-button">
+                <a href="./login.html">Log In / Sign Out</a>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

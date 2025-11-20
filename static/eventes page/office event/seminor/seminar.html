@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar, Conference, Workshop Event Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ebf5f5;
+            /* Very light teal/mint background */
+            color: #333;
+        }
+
+        /* Color Palette: #008080 (Teal/Green), #005c5c (Dark Teal), #666 (Gray) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('seminar-conference-bg.jpg') center/cover no-repeat;
+            /* Placeholder for an academic/professional background image */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .m1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 18px;
+            max-width: 750px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #008080;
+            /* Professional accent color: Teal */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.8em;
+            color: #008080;
+            background-color: #e0ffff;
+            /* Very light teal background */
+            border-bottom: 2px solid #005c5c;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #005c5c;
+            /* Heading Color */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Knowledge & Collaboration: Seminar, Conference & Workshop Services</p>
+            <p>Professional planning and seamless execution for your educational and business events.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue Sourcing & Setup</h3>
+                <p><strong>Description:</strong> Booking a comfortable and appropriate venue for educational purposes
+                    and full setup arrangement.</p>
+                <p><strong>Key Elements:</strong> Venue booking (Conference hall, Meeting rooms), Comfortable seating
+                    arrangement, Theme setup, Stage / Backdrop / Panel design.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Technical & A/V Support</h3>
+                <p><strong>Description:</strong> Ensuring high-quality equipment and technical assistance for
+                    presentations, audio, and video.</p>
+                <p><strong>Key Elements:</strong> Sound system (Mic, Speakers), Lighting setup, **Projector / LED
+                    Screen** / Display panels, Power backup (Generator, UPS).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📝</div>
+            <div class="content">
+                <h3>Documentation & Coverage</h3>
+                <p><strong>Description:</strong> Recording sessions and key speakers so the event knowledge remains
+                    available afterwards.</p>
+                <p><strong>Key Elements:</strong> Photography & videography, Live streaming (Webinar/Online), Editing of
+                    recordings and creation of notes/albums.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">☕</div>
+            <div class="content">
+                <h3>Catering & Refreshments</h3>
+                <p><strong>Description:</strong> Providing high-quality refreshments and meals during breaks, lunch, and
+                    networking sessions.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning (**Tea/Coffee breaks**), Waiter staff /
+                    Service counters, Crockery and table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Functional Furniture & Decor</h3>
+                <p><strong>Description:</strong> Arranging comfortable and functional furniture suitable for learning
+                    and networking.</p>
+                <p><strong>Key Elements:</strong> Chairs, tables, sofa (for lounge area), Stage, Basic decoration and
+                    **instructional signage**.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Staff & Volunteer Management</h3>
+                <p><strong>Description:</strong> Provision of trained staff for registration, guidance, and overall
+                    event operation.</p>
+                <p><strong>Key Elements:</strong> Security guards, Ushers / helpers, **Registration staff**, Cleaners &
+                    maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🗺️</div>
+            <div class="content">
+                <h3>Transport & Logistics</h3>
+                <p><strong>Description:</strong> Ensuring easy and timely movement of speakers, delegates, and essential
+                    materials.</p>
+                <p><strong>Key Elements:</strong> Delegate transport & parking management, Material movement, Entry /
+                    exit coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎤</div>
+            <div class="content">
+                <h3>Session Hosting & Flow</h3>
+                <p><strong>Description:</strong> Arranging a host (anchor) to maintain the event flow, introduce
+                    speakers, and manage Q&A sessions.</p>
+                <p><strong>Key Elements:</strong> **Professional Anchor / Host**, Speaker management and coordination,
+                    Event timeline management.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Seminar / Conference / Workshop Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

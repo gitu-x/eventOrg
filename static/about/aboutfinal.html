@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — EventOrg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #ff5a5f;
+      --muted: #6b7280;
+      --card: #0f172a;
+    }
+
+    /* Background Gradient */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      color: #0b1220;
+    }
+
+    /* Main Container */
+    .about-wrap {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 36px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(11, 17, 32, 0.06);
+
+    }
+
+    .about-note {
+      margin-top: 28px;
+      text-align: center;
+      padding: 18px 12px;
+    }
+
+    .about-note p {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-style: italic;
+      color: #333;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(255, 90, 95, 0.08),
+        0 1px 0 rgba(255, 255, 255, 0.6) inset;
+      max-width: 900px;
+    }
+
+    .about-note p::after {
+      content: "";
+      display: block;
+      height: 6px;
+      margin-top: 10px;
+      width: 120px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, rgba(255, 90, 95, 0.35),
+          rgba(255, 138, 102, 0.20));
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 520px) {
+      .about-note p {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .about-note p::after {
+        width: 80px;
+      }
+    }
+
+
+
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero .left {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 8px;
+      line-height: 1.05;
+      color: #0b1220;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #ff8a66);
+      color: white;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    p.lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* Buttons */
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 0;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(255, 90, 95, 0.18);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--card);
+      border: 1px solid rgba(11, 17, 32, 0.06);
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(11, 17, 32, 0.04);
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Story Section */
+    .story {
+      display: flex;
+      gap: 20px;
+      margin-top: 28px;
+      align-items: center;
+    }
+
+    .story .quote {
+      flex: 1;
+      padding: 18px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(255, 90, 95, 0.06), rgba(255, 138, 102, 0.03));
+      border: 1px solid rgba(255, 90, 95, 0.06);
+    }
+
+    .story .quote p {
+      margin: 0;
+      color: #2b2b2b;
+    }
+
+    footer.note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .about-wrap {
+        margin: 20px;
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+
+    .fade-text {
+      margin-top: 10px;
+      color: #555;
+      font-style: italic;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out for
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #0b1220;
+      font-weight: 500;
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="about-wrap" aria-labelledby="about-title">
+    <div class="hero">
+      <div class="left">
+        <span class="tag">Event Experts • Made with ❤️</span>
+        <h1 id="about-title">Your Moments — Our Planning. Memorable, Perfect, and Stress-Free.</h1>
+        <p class="lead">At EventOrg, we see every event as a beautiful story. Whether it’s a wedding, corporate meeting,
+          birthday party, or live concert — we take care of every little detail so you can simply relax and enjoy.</p>
+        <p>At EventOrg, we see every event as a beautiful story. Whether it’s a wedding, corporate meeting, birthday
+          party, or live concert — we take care of every little detail so you can simply relax and enjoy.</p>
+
+        <p><strong>At EventOrg, we don’t just plan events — we craft memories that stay forever.</strong> Every
+          celebration is a story of love, laughter, and connection — and we make sure yours shines brightest.</p>
+
+        <div class="cta-row">
+          <button class="btn">Contact Us</button>
+          <button class="btn ghost">View Packages</button>
+        </div>
+        <p class="contact-info">📞 Call us: <a href="tel:+9993248697">+9993248697</a></p>
+
+        <p style="margin-top: 10px; color: #555; font-style: bold;"></p>
+        ✨ Together, let’s turn your dreams into unforgettable celebrations — because every moment deserves perfection. ✨
+        </p>
+
+      </div>
+    </div>
+
+    <div class="features">
+      <article class="feature">
+        <h3>Complete Planning</h3>
+        <p>From venue, décor, lighting, and audio to catering — EventOrg manages everything end-to-end.</p>
+      </article>
+      <article class="feature">
+        <h3>Customized Themes</h3>
+        <p>Personalized themes and creative concepts that tell your unique story.</p>
+      </article>
+      <article class="feature">
+        <h3>On-Site Coordination</h3>
+        <p>Our experienced team ensures flawless execution and guest management on the event day.</p>
+      </article>
+    </div>
+
+    <div class="story">
+      <div class="quote">
+        <p><strong>Our Mission:</strong> To make every event stress-free, memorable, and budget-friendly. You bring the
+          idea, and EventOrg will turn it into reality.</p>
+      </div>
+      <div style="min-width:220px">
+        <p style="margin:0 0 8px;font-weight:600">Why choose EventOrg?</p>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>Transparent pricing & flexible packages</li>
+          <li>Trusted vendor network across cities</li>
+          <li>24/7 support during your event</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="about-note">
+      <p>We don’t just organize events — we craft memories that last a lifetime.</p>
+    </footer>
+  </section>
+
+</body>
+
+</html>

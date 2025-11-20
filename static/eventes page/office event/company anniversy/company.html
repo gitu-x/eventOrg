@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Anniversary Celebration Event Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            /* Light corporate background */
+            color: #333;
+        }
+
+        /* Color Palette: #003366 (Deep Navy/Blue), #ccaa00 (Gold/Yellow), #3498db (Accent Blue) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('anniversary-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a festive corporate background image */
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffcc00;
+            /* Gold text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 70px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #003366;
+            /* Corporate Blue accent */
+        }
+
+        .service-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.2em;
+            color: #ccaa00;
+            /* Gold icon color */
+            background-color: #f0f8ff;
+            /* Very light blue background */
+            border-bottom: 2px solid #3498db;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #003366;
+            /* Heading Color */
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Celebrating Milestones: Company Anniversary Event Management</p>
+            <p>From galas to employee recognition days, we plan unforgettable celebrations that honour your company's
+                journey and future.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue Sourcing & Themed Setup</h3>
+                <p><strong>Description:</strong> Finding a venue that matches the scale of the celebration, with strong
+                    branding and thematic décor.</p>
+                <p><strong>Key Elements:</strong> Venue booking (banquet, hall, resort), Seating and floor planning,
+                    **Anniversary theme & corporate branding**, Stage design / historical display setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Technical Production & A/V</h3>
+                <p><strong>Description:</strong> Reliable technical setup for speeches, presentations, historical
+                    videos, and entertainment acts.</p>
+                <p><strong>Key Elements:</strong> High-end sound system, Lighting setup (ambiance, stage), Projector /
+                    Large LED screens for visuals, Power backup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Visual Storytelling & Coverage</h3>
+                <p><strong>Description:</strong> Professionally documenting the celebration and company heritage for
+                    future marketing and internal comms.</p>
+                <p><strong>Key Elements:</strong> Photography & videography (of speeches, guests), **Historical video
+                    presentation setup**, Editing of event highlights and archival materials.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍾</div>
+            <div class="content">
+                <h3>Gala Catering & Beverage Service</h3>
+                <p><strong>Description:</strong> Planning and executing a celebratory menu, from sophisticated dining to
+                    themed cocktails.</p>
+                <p><strong>Key Elements:</strong> Custom food & beverage planning (gala dinner/buffet), Professional
+                    waiter staff, **Anniversary cake arrangement**, Crockery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Branded Decor & Seating</h3>
+                <p><strong>Description:</strong> Using furniture and décor to reflect the company's image and create a
+                    festive, high-end atmosphere.</p>
+                <p><strong>Key Elements:</strong> Chairs, tables, lounge areas, carpet, Stage and **photo-booth setup**,
+                    Floral & fabric decoration (using corporate colours), Theme-based décor items.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Dedicated Event Staff</h3>
+                <p><strong>Description:</strong> Provision of courteous staff to manage guest flow, VIP assistance, and
+                    overall event efficiency.</p>
+                <p><strong>Key Elements:</strong> Security guards, **Ushers / Guest Registration staff**, VIP assistance
+                    personnel, Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎵</div>
+            <div class="content">
+                <h3>Live Entertainment & Hosting</h3>
+                <p><strong>Description:</strong> Arranging professional hosts, musical acts, and entertainment segments
+                    to make the celebration memorable.</p>
+                <p><strong>Key Elements:</strong> **Celebrity host / Anchor**, Live music band / DJ / Special guest
+                    artists, Employee recognition segments, Games / interactive activities.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Logistics & Guest Transport</h3>
+                <p><strong>Description:</strong> Ensuring easy access, transportation, and smooth movement for all
+                    employees and special guests.</p>
+                <p><strong>Key Elements:</strong> Guest transport & parking management, Material movement
+                    (gifts/awards/decor), Entry / exit coordination.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Company Anniversary Celebration Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

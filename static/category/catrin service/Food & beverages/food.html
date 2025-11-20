@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Food & Beverage Planning</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8e1;
+            /* Light yellow/cream background (Food theme) */
+            color: #4e342e;
+            /* Dark brown text */
+        }
+
+        /* Header Styling */
+        .food-header {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            /* Amber/Orange gradient (Appetizing) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .food-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Food Service Container (Grid Layout) */
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Food Service Box Styling */
+        .food-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #ffc107;
+            /* Accent color */
+        }
+
+        .food-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .food-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #ffb74d;
+            /* Light orange accent */
+            border-bottom: 3px solid #ffc107;
+        }
+
+        .food-visual.buffet {
+            background-color: #8bc34a;
+        }
+
+        /* Buffet - Green */
+        .food-visual.plated {
+            background-color: #ef5350;
+        }
+
+        /* Plated - Red */
+        .food-visual.beverages {
+            background-color: #29b6f6;
+        }
+
+        /* Beverages - Light Blue */
+        .food-visual.stations {
+            background-color: #795548;
+        }
+
+        /* Food Stations - Brown */
+        .food-visual.diet {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+
+        /* Dietary - Yellow */
+        .food-visual.staff {
+            background-color: #ab47bc;
+        }
+
+        /* Staffing - Purple */
+        .food-visual.tasting {
+            background-color: #d4e157;
+        }
+
+        /* Tasting - Lime */
+        .food-visual.timing {
+            background-color: #455a64;
+        }
+
+        /* Timing - Blue Grey */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #ff9800;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .food-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .food-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="food-header">
+        <div>
+            <p class="m1">Exquisite Food & Beverage Planning</p>
+            <p>Craft a memorable culinary experience with customized menus and impeccable service styles for your
+                guests.</p>
+        </div>
+    </section>
+
+    <div class="food-container">
+
+        <div class="food-box">
+            <div class="food-visual buffet">🍽️</div>
+            <div class="content">
+                <h3>Buffet Service (Self-Serve)</h3>
+                <p>**Style:** Guests move to dedicated food stations. Offers **variety and quick service** for large
+                    crowds. Requires larger floor space.</p>
+                <p>**Pros/Cons:** Cost-effective, but requires careful temperature monitoring and constant restocking.
+                </p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual plated">🔪</div>
+            <div class="content">
+                <h3>Plated / A La Carte Service</h3>
+                <p>**Style:** Food is pre-portioned and served directly to seated guests. Offers the **most elegant and
+                    formal** experience.</p>
+                <p>**Pros/Cons:** High per-person cost, requires a high staff-to-guest ratio, but is highly structured
+                    and minimizes waste.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual stations">👨‍🍳</div>
+            <div class="content">
+                <h3>Interactive Food Stations</h3>
+                <p>**Style:** Specialized stations (e.g., Live Pasta Bar, Taco Stand, Dessert Counter) where food is
+                    cooked or prepared **fresh on demand**.</p>
+                <p>**Benefit:** Adds a fun, customizable, and interactive element to the dining experience.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual beverages">🥂</div>
+            <div class="content">
+                <h3>Beverage & Bar Service</h3>
+                <p>**Options:** Choose between **Cash Bar** (guests pay), **Open Bar** (host pays), or **Limited Bar**
+                    (beer/wine only). Ensure adequate licensed bartenders.</p>
+                <p>**Non-Alc:** Always provide attractive non-alcoholic options (mocktails, fresh juices) beyond basic
+                    soda/water.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual diet">🥑</div>
+            <div class="content">
+                <h3>Dietary Restrictions & Allergies</h3>
+                <p>**Critical:** Collect **RSVP information** regarding allergies (e.g., nuts, gluten), vegetarian,
+                    vegan, or religious meal requirements well in advance.</p>
+                <p>**Safety:** Ensure the kitchen and serving staff clearly label and handle special meals separately to
+                    prevent cross-contamination.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual staff">🧑‍💼</div>
+            <div class="content">
+                <h3>Catering Staffing & Ratio</h3>
+                <p>**Calculation:** Ensure the ratio of servers to guests is adequate. **Plated service** needs 1 server
+                    per 10 guests. **Buffet** needs 1 server per 20-30 guests.</p>
+                <p>**Logistics:** Confirm setup, serving, and teardown times with the catering manager.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual timing">⏰</div>
+            <div class="content">
+                <h3>Food Timing & Event Flow</h3>
+                <p>**Planning:** Food service must align perfectly with the event timeline. Avoid serving the main
+                    course during key speeches or performances.</p>
+                <p>**Breaks:** Plan coffee/tea breaks and cocktail hours to manage guest flow and allow time for venue
+                    transitions.</p>
+            </div>
+        </div>
+
+        <div class="food-box">
+            <div class="food-visual tasting"> tasting</div>
+            <div class="content">
+                <h3>Menu Tasting & Finalization</h3>
+                <p>**Review:** Conduct a **menu tasting session** 4-6 weeks before the event. Use this to finalize
+                    dishes, presentation, and make necessary spice/flavor adjustments.</p>
+                <p>**Contract:** The final contract should clearly list all agreed-upon dishes, portion sizes, and
+                    service timeline.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Food & Beverage Planning page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

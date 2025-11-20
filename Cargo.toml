@@ -1,0 +1,34 @@
+[package]
+name = "login"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Web Framework
+axum = "0.8.7"
+tokio = { version = "1.35", features = ["full"] } # Asynchronous runtime
+
+# Static Files Serving (FIXED: tower-http added)
+tower-http = { version = "0.5.0", features = ["fs", "cors"] }
+
+# Database (PostgreSQL)
+sqlx = { version = "0.8.6", features = [
+    "runtime-tokio",
+    "tls-native-tls",
+    "postgres",
+    "time",
+] }
+
+# Environment variables
+dotenvy = "0.15"
+
+# Form Data Serialization
+serde = { version = "1.0", features = ["derive"] }
+# FIXED: Added 'parsing' and 'macros' feature for Date handling
+time = { version = "0.3", features = ["serde", "parsing", "macros"] }
+serde_json = "1.0"
+
+# Other
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+axum-extra = { version = "0.12.2", features = ["typed-header", "cookie"] }

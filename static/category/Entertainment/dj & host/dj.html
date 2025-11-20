@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event DJ & Host (MC) Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbe6ff;
+            /* Light magenta/pink background (Entertainment theme) */
+            color: #512da8;
+            /* Deep purple text */
+        }
+
+        /* Header Styling */
+        .entertainment-header {
+            background: linear-gradient(135deg, #ab47bc, #6a1b9a);
+            /* Vibrant purple gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .entertainment-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Entertainment Component Container (Grid Layout) */
+        .entertainment-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Entertainment Component Box Styling */
+        .entertainment-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #ab47bc;
+            /* Accent color */
+        }
+
+        .entertainment-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .entertainment-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #ce93d8;
+            /* Medium purple accent */
+            border-bottom: 3px solid #ab47bc;
+        }
+
+        .entertainment-visual.dj-gear {
+            background-color: #4db6ac;
+        }
+
+        /* DJ Gear - Teal */
+        .entertainment-visual.host-role {
+            background-color: #ffb74d;
+        }
+
+        /* Host Role - Orange */
+        .entertainment-visual.playlist {
+            background-color: #e57373;
+        }
+
+        /* Playlist - Red */
+        .entertainment-visual.script {
+            background-color: #66bb6a;
+        }
+
+        /* Script - Green */
+        .entertainment-visual.tech-rider {
+            background-color: #9e9e9e;
+        }
+
+        /* Tech Rider - Grey */
+        .entertainment-visual.mc-mic {
+            background-color: #3f51b5;
+        }
+
+        /* MC Mic - Indigo */
+        .entertainment-visual.vibe {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+
+        /* Vibe - Yellow */
+        .entertainment-visual.coordination {
+            background-color: #d81b60;
+        }
+
+        /* Coordination - Magenta */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #6a1b9a;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .entertainment-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .entertainment-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="entertainment-header">
+        <div>
+            <p class="m1">DJ & Event Host (MC) Management</p>
+            <p>Set the perfect mood, manage the flow, and keep your audience energized with expert entertainment
+                professionals.</p>
+        </div>
+    </section>
+
+    <div class="entertainment-container">
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual host-role">🎤</div>
+            <div class="content">
+                <h3>The Host / MC (Role & Style)</h3>
+                <p>**Role:** The voice of the event. Manages the timeline, introduces speakers, engages the audience,
+                    and keeps the energy high during transitions.</p>
+                <p>**Selection:** Choose a Host whose style (**formal, witty, high-energy**) matches your event theme.
+                </p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual dj-gear">🎧</div>
+            <div class="content">
+                <h3>DJ Console & Equipment</h3>
+                <p>**Setup:** Requires a sturdy, dedicated table/platform near the dance floor. Must have reliable
+                    **power access** separate from lighting.</p>
+                <p>**Gear:** Professional **DJ Controller/Mixer, Headphones**, and a backup audio source (e.g.,
+                    secondary laptop).</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual script">📜</div>
+            <div class="content">
+                <h3>MC Script & Cue Sheet</h3>
+                <p>**Requirement:** The Host must have a final, approved script with **precise timing, speaker names
+                    (pronunciation check!)**, and transitions.</p>
+                <p>**Critical:** Include **mic checks** and **countdown cues** for technical team coordination.</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual playlist">🎶</div>
+            <div class="content">
+                <h3>DJ Playlist & Genre Planning</h3>
+                <p>**Input:** Provide the DJ with a **'Must-Play' list, a 'Do-Not-Play' list,** and the preferred music
+                    genres for different phases (e.g., Dinner/Cocktail/Dance).</p>
+                <p>**Timing:** Specific songs are required for entry, cake cutting, or awards ceremonies—share these
+                    well in advance.</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual coordination">🤝</div>
+            <div class="content">
+                <h3>Host & DJ Coordination (Key)</h3>
+                <p>**Collaboration:** The Host and DJ must coordinate live. The Host signals for entry music, exit
+                    music, or a change in lighting/vibe directly to the DJ.</p>
+                <p>**Tools:** Use a **dedicated communication channel** (e.g., direct line via intercom/walkie-talkie)
+                    between the two.</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual mc-mic">🎙️</div>
+            <div class="content">
+                <h3>Host Microphone & Sound Check</h3>
+                <p>**Gear:** Provide the Host with a high-quality **Wireless Headset or Handheld Microphone**
+                    (preferred). Always have a fully charged backup microphone ready.</p>
+                <p>**Test:** A full sound check is mandatory one hour before guests arrive to set the correct
+                    gain/volume.</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual vibe">🥳</div>
+            <div class="content">
+                <h3>Vibe Check & Audience Reading</h3>
+                <p>**Skill:** A good DJ/Host can read the crowd's energy and adjust the music tempo or interaction style
+                    immediately.</p>
+                <p>**Flexibility:** They should be flexible enough to handle spontaneous requests or make on-the-spot
+                    changes to the script/playlist if needed.</p>
+            </div>
+        </div>
+
+        <div class="entertainment-box">
+            <div class="entertainment-visual tech-rider">🔌</div>
+            <div class="content">
+                <h3>Technical Rider & Venue Check</h3>
+                <p>**Requirement:** The DJ should submit a **Tech Rider** (list of required equipment, power, and space)
+                    beforehand.</p>
+                <p>**Venue Team:** The venue's sound engineer or event manager must verify that all technical
+                    requirements can be met.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event DJ & Host (MC) Setup page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

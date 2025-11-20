@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS कोड यहाँ शुरू होता है */
+
+        /* सामान्य रीसेट और बॉडी स्टाइलिंग - Sign-up Page Theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            /* Sign-up Page Background Theme */
+            background-image: url('../pt2.jpg');
+            /* <<-- अपनी इमेज URL यहाँ रखें -->> */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f8f9fa;
+            /* Light background if image fails */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            color: #3c4043;
+            /* Dark text color for contrast */
+            padding: 20px;
+        }
+
+        /* कंटेनर स्टाइलिंग - Material White Card */
+        .login-container {
+            width: 90%;
+            max-width: 450px;
+            padding: 48px 40px 36px 40px;
+            background: #fff;
+            /* White background */
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+            /* Subtle Shadow */
+        }
+
+        /* Logo/Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            font-size: 36px;
+            font-weight: 400;
+            color: #5f6368;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo .event-part {
+            color: #f98b00;
+            /* Orange Theme Color */
+            font-weight: 500;
+        }
+
+        .logo .org-part {
+            color: #5f6368;
+            font-weight: 400;
+        }
+
+        /* शीर्षक (Title) स्टाइलिंग */
+        .title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #3c4043;
+        }
+
+        .subtitle {
+            font-size: 1em;
+            color: #5f6368;
+            margin-bottom: 30px;
+        }
+
+        /* इनपुट ग्रुप स्टाइलिंग - Material Floating Input */
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #80868b;
+            /* Icon color */
+            font-size: 1em;
+            pointer-events: none;
+            transition: color 0.3s;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 40px;
+            /* Left padding for icon */
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            outline: none;
+            color: #3c4043;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #f98b00;
+            /* Orange focus color */
+            border-width: 2px;
+            padding: 14px 14px 14px 39px;
+            /* Adjust padding due to border change */
+        }
+
+        .input-group input:focus+label,
+        .input-group input:not(:placeholder-shown)+label {
+            top: -10px;
+            font-size: 12px;
+            color: #f98b00;
+            background: #fff;
+            padding: 0 5px;
+        }
+
+        .input-group input::placeholder {
+            color: transparent;
+            /* Hide default placeholder for floating label effect */
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 15px;
+            left: 40px;
+            color: #80868b;
+            font-size: 16px;
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+
+
+        /* विकल्प पंक्ति (Options Row) स्टाइलिंग */
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #5f6368;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Custom Checkbox based on Material Design */
+        .remember-me input[type="checkbox"] {
+            margin-right: 8px;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #80868b;
+            border-radius: 2px;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .remember-me input[type="checkbox"]:checked {
+            border-color: #f98b00;
+            background-color: #f98b00;
+        }
+
+        .remember-me input[type="checkbox"]:checked:before {
+            content: "\f00c";
+            /* Font Awesome check mark */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+
+        .forgot-password {
+            color: #f98b00;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .forgot-password:hover {
+            color: #e57d00;
+        }
+
+        /* बटन कंटेनर और लॉगिन बटन स्टाइलिंग */
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            /* Align to right side */
+            margin-top: 40px;
+        }
+
+        .login-btn {
+            padding: 12px 28px;
+            background-color: #f98b00;
+            /* Orange Theme Color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            /* Remove underline from login button */
+            display: inline-block;
+            line-height: normal;
+        }
+
+        .login-btn:hover {
+            background-color: #e57d00;
+        }
+
+        /* 'or' विभाजक (Separator) स्टाइलिंग */
+        .or-separator {
+            margin: 20px 0;
+            font-size: 1em;
+            color: #80868b;
+            position: relative;
+        }
+
+        .or-separator::before,
+        .or-separator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #dadce0;
+        }
+
+        .or-separator::before {
+            left: 0;
+        }
+
+        .or-separator::after {
+            right: 0;
+        }
+
+        /* सोशल लॉगिन/साइन अप बटन स्टाइलिंग */
+        .social-login {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .social-btn {
+            flex-grow: 1;
+            padding: 12px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            /* Add border: none for button elements */
+            cursor: pointer;
+        }
+
+        /* Updated Social/Sign Up Buttons */
+        .signup-btn {
+            flex-grow: 1;
+            padding: 12px;
+            background-color: #4285f4;
+            /* Google Blue - often used for secondary action */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .signup-btn:hover {
+            background-color: #3b78e7;
+        }
+
+        .signup-btn a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .social-btn i {
+            margin-right: 8px;
+        }
+
+        /* कॉपीराइट फ़ूटर स्टाइलिंग */
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            /* Improved visibility on image background */
+        }
+
+        /* Fix for original code's button containing <a> tag */
+        .login-btn-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-btn-wrapper button {
+            width: 100%;
+            border: none;
+            padding: 0;
+            background: none;
+        }
+
+        .login-btn-wrapper a {
+            display: block;
+            width: 100%;
+            padding: 15px;
+        }
+
+        /* Override to style the login button wrapper correctly */
+        .login-form>button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .social-login>button {
+            flex-grow: 1;
+            padding: 12px;
+            font-size: 1.1em;
+        }
+
+        /* CSS कोड यहाँ समाप्त होता है */
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="header">
+            <div class="logo"><span class="event-part">Event</span><span class="org-part">Organization</span></div>
+            <h1 class="title">Sign In</h1>
+            <p class="subtitle">Use your event account.</p>
+        </div>
+
+        <form class="login-form" action="/login" method="post">
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" id="username" name="username" class="input-field" placeholder=" " required>
+                <label for="username">Username / Email</label>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" name="password" class="input-field" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+
+            <div class="options-row">
+                <label class="remember-me">
+                    <input type="checkbox" checked>
+                    Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn" style="width: 100%; margin-bottom: 15px;">Login</button>
+
+
+            <div class="or-separator">or</div>
+
+            <div class="social-login">
+                <button type="button" class="signup-btn">
+                    <a href="/static/profile/signup.html">Create New Account</a>
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer class="copyright">
+        &copy; #Dostana : A New Think | Design by gitu.x
+    </footer>
+
+</body>
+
+</html>

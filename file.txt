@@ -1,0 +1,167 @@
+Folder PATH listing
+Volume serial number is D004-1323
+C:.
+|   .env
+|   .gitignore
+|   Cargo.lock
+|   Cargo.toml
+|   file.txt
+|   
++---src
+|       main.rs
+|       
+\---static
+    |   eventorganaization.sln
+    |   feed.html
+    |   index.html
+    |   pt1.jpg
+    |   pt2.jpg
+    |   pt3.jpg
+    |   pt4.jpg
+    |   pt5.jpg
+    |   pt6.jpg
+    |   pt7.jpg
+    |   pt8.jpg
+    |   
+    +---.vscode
+    |       settings.json
+    |       
+    +---about
+    |       about.css
+    |       aboutfinal.html
+    |       
+    +---category
+    |   |   list.html
+    |   |   
+    |   +---catrin service
+    |   |   +---cokrey
+    |   |   |       cockrey.html
+    |   |   |       
+    |   |   +---Food & beverages
+    |   |   |       food.html
+    |   |   |       
+    |   |   \---service counter
+    |   |           service.html
+    |   |           
+    |   +---Entertainment
+    |   |   +---dj & host
+    |   |   |       dj.html
+    |   |   |       
+    |   |   \---performance
+    |   |           performance.html
+    |   |           
+    |   +---manpower
+    |   |   +---security
+    |   |   |       security.html
+    |   |   |       
+    |   |   \---users(manpower)
+    |   |           users.html
+    |   |           
+    |   +---media
+    |   |   +---album
+    |   |   |       album.html
+    |   |   |       
+    |   |   +---drone
+    |   |   |       drone.html
+    |   |   |       
+    |   |   \---photography
+    |   |           photo.html
+    |   |           
+    |   +---technical & infrastructure
+    |   |   +---display
+    |   |   |       display.html
+    |   |   |       
+    |   |   +---lighting
+    |   |   |       light.html
+    |   |   |       
+    |   |   +---power backup
+    |   |   |       power.html
+    |   |   |       
+    |   |   \---sound
+    |   |           sound.html
+    |   |           
+    |   +---transport
+    |   |   +---guest transport
+    |   |   |       gues.html
+    |   |   |       
+    |   |   \---material movement
+    |   |           material.html
+    |   |           
+    |   \---venue setup
+    |       +---decoration
+    |       |       deco.html
+    |       |       pt11.avif
+    |       |       
+    |       +---hotels venue
+    |       |       pt9.jpg
+    |       |       venue_booking.html
+    |       |       
+    |       +---setting
+    |       |       pt10.jpg
+    |       |       settingar.html
+    |       |       
+    |       \---stage
+    |               pt12.jpg
+    |               stage.html
+    |               
+    +---eventes page
+    |   +---culturer event
+    |   |   +---festiwal celibration
+    |   |   |       festiwal.html
+    |   |   |       
+    |   |   \---school
+    |   |           school.html
+    |   |           
+    |   +---music
+    |   |       music.html
+    |   |       
+    |   +---office event
+    |   |   +---annual metting
+    |   |   |       annual.html
+    |   |   |       
+    |   |   +---award chear money
+    |   |   |       chearmoney.html
+    |   |   |       
+    |   |   +---company anniversy
+    |   |   |       company.html
+    |   |   |       
+    |   |   +---product lunch
+    |   |   |       lunch.html
+    |   |   |       
+    |   |   +---seminor
+    |   |   |       seminar.html
+    |   |   |       
+    |   |   \---trainning program
+    |   |           trainning.html
+    |   |           
+    |   \---social event
+    |       +---aniversery
+    |       |       aniversery.html
+    |       |       
+    |       +---baby sower
+    |       |       baby.html
+    |       |       
+    |       +---birthaday party
+    |       |       birthday.html
+    |       |       
+    |       +---engagement
+    |       |   \---sangeet
+    |       |       \---mehdi
+    |       |               sangeet.html
+    |       |               
+    |       +---farewall party
+    |       |       farewal.html
+    |       |       
+    |       \---wendding
+    |               wending.html
+    |               
+    +---home page
+    |       new home.html
+    |       
+    \---profile
+            list.html
+            login.html
+            profile.html
+            signup.html
+            test.html
+            

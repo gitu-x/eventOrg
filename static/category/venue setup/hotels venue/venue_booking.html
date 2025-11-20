@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Venues (Venue)</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* A bit more elegant font */
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f3;
+            /* Lighter, warmer background */
+            color: #4a4a4a;
+        }
+
+        /* Header Styling - Inspired by the EventOrg banner */
+        .venue-header {
+            background: url('pt9.jpg') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            /* Needed for positioning the pseudo-element */
+            overflow: hidden;
+            /* Important to clip the blur effect at the edges */
+        }
+
+        /* Pseudo-element for the blurred background */
+        .venue-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            /* Inherit the background image from the parent */
+            filter: blur(5px);
+            /* Apply the blur effect (adjust value as needed) */
+            z-index: 0;
+            /* Place behind the text */
+        }
+
+        .venue-header>div {
+            position: relative;
+            /* Make sure the text content is positioned relative */
+            z-index: 1;
+            /* Place text above the blurred background */
+            padding: 20px;
+            /* Add some padding around the text */
+
+            /* Optional: add a semi-transparent background to the text container for better readability */
+            border-radius: 8px;
+            /* Optional: rounded corners for the text background */
+        }
+
+        .m1 {
+            color: white;
+            text-shadow:
+                1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .venue-header p:not(.m1) {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 10px auto 0;
+            /* Center the paragraph and add some top margin */
+        }
+
+
+
+        /* Venue Container (Grid Layout) */
+        .venue-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px 40px;
+            /* More padding */
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Venue Box Styling */
+        .venue-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            /* Softer rounded corners */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            /* Slightly more prominent shadow */
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* Smooth transition */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .venue-box:hover {
+            transform: translateY(-8px);
+            /* More pronounced lift effect */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image Placeholder Styling */
+        .image-placeholder {
+            height: 180px;
+            background: linear-gradient(to bottom right, #fdd835, #ffb300);
+            /* Warm golden gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #795548;
+            /* Darker brown for text on golden background */
+            font-weight: bold;
+            border-bottom: 5px solid #ff8f00;
+            /* Darker orange accent */
+            text-align: center;
+            padding: 10px;
+            /* Add some padding for better text display */
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 20px;
+            /* More padding inside content */
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #b06e2e;
+            /* Warm brown/orange for headings */
+            font-size: 1.6em;
+            /* Slightly larger heading */
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #6d6d6d;
+            /* Softer dark gray for description */
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .venue-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .venue-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .venue-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="venue-header">
+        <div>
+            <p class="m1">Hotel Venues</p>
+            <p>Your trusted partner for amazing event experiences. Discover our exquisite hotel venues for your special
+                occasions.
+            </p>
+        </div>
+    </section>
+
+    <div class="venue-container">
+
+        <div class="venue-box">
+            <div class="image-placeholder">The Grand Ballroom</div>
+            <div class="content">
+                <h3>The Grand Ballroom</h3>
+                <p>Perfect for large weddings and corporate events. (Capacity: 500+)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Executive Meeting Suite</div>
+            <div class="content">
+                <h3>Executive Meeting Suite</h3>
+                <p>Ideal for business conferences and smaller gatherings. (Capacity: 50)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Rooftop Terrace 'Skyview'</div>
+            <div class="content">
+                <h3>Rooftop Terrace 'Skyview'</h3>
+                <p>Stunning city views for cocktail parties and receptions. (Capacity: 150)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">The Royal Gardens</div>
+            <div class="content">
+                <h3>The Royal Gardens</h3>
+                <p>Spacious outdoor lawn for grand celebratory functions. (Capacity: 800+)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">The Crystal Lounge</div>
+            <div class="content">
+                <h3>The Crystal Lounge</h3>
+                <p>Luxurious setting for private dinners and exclusive parties. (Capacity: 100)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Conference Hall A</div>
+            <div class="content">
+                <h3>Conference Hall A</h3>
+                <p>Equipped with modern A/V for seminars and workshops. (Capacity: 200)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Poolside Deck</div>
+            <div class="content">
+                <h3>Poolside Deck</h3>
+                <p>Relaxed atmosphere for casual parties and brunch events. (Capacity: 75)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Mini-Theater</div>
+            <div class="content">
+                <h3>Mini-Theater</h3>
+                <p>Perfect for product launches and high-impact presentations. (Capacity: 40)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Heritage Courtyard</div>
+            <div class="content">
+                <h3>Heritage Courtyard</h3>
+                <p>Unique traditional setting for cultural events and festivities. (Capacity: 350)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Board Room 'Apex'</div>
+            <div class="content">
+                <h3>Board Room 'Apex'</h3>
+                <p>High-end space for crucial executive meetings. (Capacity: 20)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">The Atrium</div>
+            <div class="content">
+                <h3>The Atrium</h3>
+                <p>Bright and open area for exhibitions and trade shows. (Capacity: 180)</p>
+            </div>
+        </div>
+
+        <div class="venue-box">
+            <div class="image-placeholder">Private Dining Alcove</div>
+            <div class="content">
+                <h3>Private Dining Alcove</h3>
+                <p>Intimate space for small celebratory dinners and gatherings. (Capacity: 12)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const venueBoxes = document.querySelectorAll('.venue-box');
+
+            venueBoxes.forEach(box => {
+                const heading = box.querySelector('h3').textContent;
+                const placeholder = box.querySelector('.image-placeholder');
+
+                // Placeholder text को h3 के content से बदल देगा
+                placeholder.innerHTML = ``;
+            });
+
+            console.log("12 Hotel Venue boxes are loaded successfully within a single HTML file.");
+        });
+    </script>
+
+</body>
+
+</html>

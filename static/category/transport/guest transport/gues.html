@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Transportation Planning & Logistics</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e5f5;
+            /* Light purple/lavender background (Luxury/Service theme) */
+            color: #4527a0;
+            /* Deep purple text */
+        }
+
+        /* Header Styling */
+        .transport-header {
+            background: linear-gradient(135deg, #7e57c2, #4527a0);
+            /* Mid to deep purple gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .transport-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Transport Component Container (Grid Layout) */
+        .transport-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Transport Component Box Styling */
+        .transport-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #7e57c2;
+            /* Accent color */
+        }
+
+        .transport-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .transport-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #b39ddb;
+            /* Medium purple accent */
+            border-bottom: 3px solid #7e57c2;
+        }
+
+        .transport-visual.types {
+            background-color: #ffb300;
+        }
+
+        /* Types - Amber */
+        .transport-visual.scheduling {
+            background-color: #4db6ac;
+        }
+
+        /* Scheduling - Teal */
+        .transport-visual.arrivals {
+            background-color: #d81b60;
+        }
+
+        /* Arrivals - Red */
+        .transport-visual.departure {
+            background-color: #3f51b5;
+        }
+
+        /* Departure - Indigo */
+        .transport-visual.parking {
+            background-color: #43a047;
+        }
+
+        /* Parking - Green */
+        .transport-visual.route {
+            background-color: #8d6e63;
+        }
+
+        /* Route - Brown */
+        .transport-visual.vip {
+            background-color: #ff7043;
+        }
+
+        /* VIP - Orange */
+        .transport-visual.staff {
+            background-color: #00bcd4;
+        }
+
+        /* Staff - Cyan */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #4527a0;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .transport-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .transport-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="transport-header">
+        <div>
+            <p class="m1">Guest Transportation Planning & Logistics</p>
+            <p>Ensure a seamless and comfortable journey for every guest, from arrival points to the venue and back.</p>
+        </div>
+    </section>
+
+    <div class="transport-container">
+
+        <div class="transport-box">
+            <div class="transport-visual types">🚌</div>
+            <div class="content">
+                <h3>Vehicle Types & Fleet Selection</h3>
+                <p>**Variety:** Choose based on guest volume and event type: **Coaches/Buses** (large groups),
+                    **Mini-vans** (mid-size transfers), **Luxury Sedans** (VIP/Individual transfers).</p>
+                <p>**Requirement:** Vehicles must be well-maintained, air-conditioned, and have valid commercial
+                    permits.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual scheduling">⏰</div>
+            <div class="content">
+                <h3>Schedule Planning & Timing</h3>
+                <p>**Crucial:** Create a detailed **Pick-up/Drop-off Schedule** with buffer time for traffic. For
+                    shuttles, define fixed, frequent intervals between locations (e.g., hotel to venue).</p>
+                <p>**Communication:** Clearly share the schedule with guests, hotels, and all drivers.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual arrivals">✈️</div>
+            <div class="content">
+                <h3>Airport & Station Arrivals</h3>
+                <p>**Protocol:** Dedicated staff must be positioned at the airport/station with **name placards** or
+                    identifiable uniforms/badges.</p>
+                <p>**Info:** Staff need real-time flight/train tracking to manage delays and coordinate driver
+                    movements.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual departure">🌙</div>
+            <div class="content">
+                <h3>Late-Night & Final Departures</h3>
+                <p>**Safety:** Ensure the late-night departure area is **well-lit and secure**. For events with alcohol,
+                    ensure drivers are sober and briefed on safety.</p>
+                <p>**Logistics:** Have more vehicles ready for the final peak rush after the event concludes.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual parking">🅿️</div>
+            <div class="content">
+                <h3>Venue Parking & Staging Area</h3>
+                <p>**Planning:** Designate a clear, accessible area near the venue for **Guest Drop-off/Pick-up** (no
+                    parking allowed) and a separate, secured area for the **Drivers/Fleet to wait (Staging)**.</p>
+                <p>**Valet:** If offering Valet Parking, ensure adequate, trained staff and secure key management.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual route">🗺️</div>
+            <div class="content">
+                <h3>Route Planning & Traffic Management</h3>
+                <p>**Preparation:** Drivers must be given maps and alternative routes to avoid known traffic choke
+                    points or construction zones.</p>
+                <p>**Liaison:** Coordinate with local traffic police or venue security for smooth road access during
+                    peak arrival/departure times.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual vip">💼</div>
+            <div class="content">
+                <h3>VIP/VVIP Protocol & Escort</h3>
+                <p>**Service:** Provide dedicated, high-end vehicles (e.g., SUV, luxury sedan) and professional,
+                    discreet drivers for VIP guests.</p>
+                <p>**Safety:** Use a **security escort** or a lead car if required, and ensure the driver knows the
+                    confidential itinerary.</p>
+            </div>
+        </div>
+
+        <div class="transport-box">
+            <div class="transport-visual staff">📞</div>
+            <div class="content">
+                <h3>Transportation Manager & Staffing</h3>
+                <p>**Team:** A single **Transportation Manager** must oversee all logistics, drivers, and guest queries.
+                    Assign staff to high-traffic areas (lobby, departure gate).</p>
+                <p>**Communication:** All staff and drivers must have working **radios/mobile phones** and a master
+                    contact list.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Guest Transportation Planning & Logistics page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

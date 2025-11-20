@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Celebration Planning & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            /* Light blue-gray background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .theme-header {
+            /* Elegant, romantic background suitable for anniversaries */
+            background: linear-gradient(rgba(170, 0, 0, 0.6), rgba(255, 69, 0, 0.6)), url('anniversary-celebration-bg.jpg') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #d32f2f;
+            /* Anniversary accent color: Deep Red */
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5em;
+            color: #d32f2f;
+            background-color: #ffebee;
+            /* Very light red/pink background */
+            border-bottom: 3px solid #b71c1c;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #b71c1c;
+            /* Heading Color */
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Anniversary Celebrations: Marking Your Milestones</p>
+            <p>From intimate romantic dinners to grand vow renewal parties, we specialize in celebrating your journey
+                together.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🌹</div>
+            <div class="content">
+                <h3>Romantic Decor & Ambiance</h3>
+                <p><strong>Description:</strong> Creating a memorable and romantic atmosphere tailored to the couple's
+                    style and milestone (e.g., Silver or Gold).</p>
+                <p><strong>Key Elements:</strong> Candles & Florals (Roses), Elegant Lighting (Warm Tones), Personalized
+                    Backdrops, Table Settings for couples/guests, Thematic color schemes.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🥂</div>
+            <div class="content">
+                <h3>Venue Selection & Layout</h3>
+                <p><strong>Description:</strong> Finding the perfect setting, whether it's a private rooftop, a banquet
+                    hall, or an intimate space at home.</p>
+                <p><strong>Key Elements:</strong> Venue Booking & Permits, Seating arrangement (Couple's table focus),
+                    Dance floor setup, Customized entrance and welcome area.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍷</div>
+            <div class="content">
+                <h3>Gourmet Catering & Bar Service</h3>
+                <p><strong>Description:</strong> High-end food and beverage planning, often including specialized
+                    desserts, fine dining, and cocktail service.</p>
+                <p><strong>Key Elements:</strong> Customized Multi-course Menu, Anniversary Cake design, Full Bar setup
+                    & Bartenders, Champagne toasts, Personalized cocktails.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎷</div>
+            <div class="content">
+                <h3>Live Entertainment & Music</h3>
+                <p><strong>Description:</strong> Providing suitable entertainment to set the mood, from background music
+                    to engaging performances.</p>
+                <p><strong>Key Elements:</strong> Live Bands/Jazz Musicians, DJ/Dance Music setup, Professional
+                    Anchor/Host, Personalized Slideshow/Video Tribute display.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎞️</div>
+            <div class="content">
+                <h3>Photography & Keepsakes</h3>
+                <p><strong>Description:</strong> Professionally documenting the celebration and arranging meaningful
+                    elements for the couple.</p>
+                <p><strong>Key Elements:</strong> Event Photography & Videography, Photo Booths for guests, Memory
+                    Wall/Photo Display of the couple's journey, Guest Book.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💍</div>
+            <div class="content">
+                <h3>Vow Renewal & Special Moments</h3>
+                <p><strong>Description:</strong> Assistance in planning the ceremonial aspects, like renewal of vows or
+                    special speeches.</p>
+                <p><strong>Key Elements:</strong> Vow Renewal Planning, Speech Coordination, Surprise Gift Arrangements,
+                    First Dance area setup, Invitation card design.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🛎️</div>
+            <div class="content">
+                <h3>Staffing & Guest Logistics</h3>
+                <p><strong>Description:</strong> Discreet and professional staff to ensure a seamless experience for the
+                    couple and their guests.</p>
+                <p><strong>Key Elements:</strong> Professional Waitstaff and Stewards, Security personnel, Valet Parking
+                    services, Guest transportation coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💝</div>
+            <div class="content">
+                <h3>Gifts & Party Favors</h3>
+                <p><strong>Description:</strong> Assistance with preparing thank you gifts for guests or coordinating
+                    surprise gifts for the couple.</p>
+                <p><strong>Key Elements:</strong> Customized Party Favors, Gift Coordination (receiving/displaying),
+                    Thank You Note preparation.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Anniversary Celebration Planning page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

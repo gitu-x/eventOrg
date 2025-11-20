@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Events: Annual Meeting Planning & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            /* Light professional gray background */
+            color: #333;
+        }
+
+        /* Color Palette: #007bff (Blue), #0056b3 (Darker Blue), #6c757d (Gray) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('office-meeting-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a professional background image */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #007bff;
+            /* Corporate accent color: Blue */
+        }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 100px;
+            /* Slightly smaller height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: #007bff;
+            background-color: #e6f2ff;
+            /* Very light blue background */
+            border-bottom: 2px solid #0056b3;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #0056b3;
+            /* Heading Color */
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Annual Meeting: Corporate Event Planning & Execution</p>
+            <p>Ensure a professional and impactful annual meeting with our end-to-end event services.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue Sourcing & Setup</h3>
+                <p><strong>Description:</strong> Selection and booking of a professional venue with complete setup for
+                    presentations and discussions.</p>
+                <p><strong>Key Elements:</strong> Venue booking (banquet, hall), Seating arrangement, Decoration &
+                    theme setup, Stage design / backdrop setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>A/V & Technical Support</h3>
+                <p><strong>Description:</strong> High-quality audio-visual and technical infrastructure for smooth
+                    presentations and clear communication.</p>
+                <p><strong>Key Elements:</strong> Sound system (mic, speakers, mixer), Lighting setup (stage, ambient),
+                    Projector / LED screen / Display panels, Power backup (generator, UPS).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎥</div>
+            <div class="content">
+                <h3>Corporate Media Coverage</h3>
+                <p><strong>Description:</strong> Documenting the key moments and speaker sessions professionally for
+                    internal and external use.</p>
+                <p><strong>Key Elements:</strong> Photography & videography, Live streaming (optional), Editing &
+                    documentation.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍽️</div>
+            <div class="content">
+                <h3>F&B and Refreshments</h3>
+                <p><strong>Description:</strong> Provision of high-quality food, snacks, and beverages for attendees
+                    during breaks and meals.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning, Waiter staff / serving counters, Crockery,
+                    cutlery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Seating & Professional Décor</h3>
+                <p><strong>Description:</strong> Functional and comfortable seating, along with professional branding
+                    and subtle décor.</p>
+                <p><strong>Key Elements:</strong> Chairs, tables, sofa, carpet, stage, Basic floral & fabric decoration,
+                    Theme-based décor items.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Event Management Staff</h3>
+                <p><strong>Description:</strong> Professional and organized staff for registration, security, and
+                    general event flow management.</p>
+                <p><strong>Key Elements:</strong> Security guards, Ushers / helpers, Reception / registration staff,
+                    Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Logistics & Coordination</h3>
+                <p><strong>Description:</strong> Managing the movement of guests and materials efficiently to ensure a
+                    hassle-free event.</p>
+                <p><strong>Key Elements:</strong> Guest transport & parking management, Material movement, Entry / exit
+                    coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎵</div>
+            <div class="content">
+                <h3>Optional Networking Activities</h3>
+                <p><strong>Description:</strong> Light activities or hosting to facilitate networking and engagement
+                    during breaks or after the main session.</p>
+                <p><strong>Key Elements:</strong> Host/Anchor (for structured session), Light background music, Ice
+                    breaker games (optional).</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Office Annual Meeting Planning & Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

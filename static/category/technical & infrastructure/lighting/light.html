@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Lighting Setup & Design</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3f0;
+            /* Light parchment/neutral background */
+            color: #2c3e50;
+        }
+
+        /* Header Styling */
+        .light-header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            /* Warm orange/amber gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .light-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Light Component Container (Grid Layout) */
+        .light-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Light Component Box Styling */
+        .light-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #f39c12;
+            /* Accent color */
+        }
+
+        .light-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .light-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #f1c40f;
+            /* Yellow accent */
+            border-bottom: 3px solid #f39c12;
+        }
+
+        .light-visual.wash {
+            background-color: #3498db;
+        }
+
+        /* Blue */
+        .light-visual.spot {
+            background-color: #e74c3c;
+        }
+
+        /* Red */
+        .light-visual.moving {
+            background-color: #9b59b6;
+        }
+
+        /* Purple */
+        .light-visual.uplighting {
+            background-color: #2ecc71;
+        }
+
+        /* Green */
+        .light-visual.gobo {
+            background-color: #c0392b;
+        }
+
+        /* Dark Red */
+        .light-visual.led {
+            background-color: #1abc9c;
+        }
+
+        /* Turquoise */
+        .light-visual.control {
+            background-color: #2c3e50;
+        }
+
+        /* Dark Blue */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #e67e22;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .light-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .light-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="light-header">
+        <div>
+            <p class="m1">Dynamic Event Lighting Solutions</p>
+            <p>Master the atmosphere and highlight key moments with professional lighting design and equipment.</p>
+        </div>
+    </section>
+
+    <div class="light-container">
+
+        <div class="light-box">
+            <div class="light-visual wash">💡</div>
+            <div class="content">
+                <h3>Wash Lighting (Ambient)</h3>
+                <p>**Purpose:** To provide **general, wide-area illumination** with a soft, even color. It sets the
+                    overall mood and base color of the room.</p>
+                <p>**Use:** Covering the entire stage or walls in a single color. Essential for corporate meetings and
+                    receptions.</p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual spot">🎯</div>
+            <div class="content">
+                <h3>Spotlighting (Key Focus)</h3>
+                <p>**Purpose:** To sharply **illuminate a specific person or object**, drawing the audience's attention
+                    instantly. Typically a white or warm light.</p>
+                <p>**Use:** Highlighting speakers at the lectern, cake cutting at a wedding, or an award recipient.</p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual uplighting">⬆️</div>
+            <div class="content">
+                <h3>Uplighting (Architectural)</h3>
+                <p>**Purpose:** Lights placed on the floor, aimed upwards to **decorate walls, pillars, or drapes**.
+                    Adds depth and height to the venue.</p>
+                <p>**Use:** Transforming a plain banquet hall into a vibrant space; aligning light color with event
+                    theme.</p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual moving">🔄</div>
+            <div class="content">
+                <h3>Moving Head Lights</h3>
+                <p>**Purpose:** Automated fixtures that can move, change color, and change patterns (**Gobos**) quickly.
+                    Highly dynamic and versatile.</p>
+                <p>**Use:** Dance floors, concerts, DJ events, creating energy during event breaks or performances.</p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual gobo">🖼️</div>
+            <div class="content">
+                <h3>Gobo Projection</h3>
+                <p>**Purpose:** Stencils placed inside lights to project **custom shapes, logos, or text** onto walls,
+                    floors, or the stage backdrop.</p>
+                <p>**Use:** Displaying a company logo, a couple's initials, or a thematic pattern at entry points.</p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual led">🌈</div>
+            <div class="content">
+                <h3>LED Pars & Strips</h3>
+                <p>**Purpose:** Energy-efficient fixtures capable of producing millions of colors. Used for flexible
+                    wash lighting and highlighting features.</p>
+                <p>**Use:** Backlighting stage scenery, lighting small decorative elements, or color-changing effects.
+                </p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual control">🌫️</div>
+            <div class="content">
+                <h3>Hazers & Smoke Machines</h3>
+                <p>**Purpose:** To disperse a fine, non-toxic mist into the air. This makes **light beams visible**
+                    (creating the "laser show" effect).</p>
+                <p>**Use:** Dramatically enhancing the look of moving lights, lasers, and stage washes for musical acts.
+                </p>
+            </div>
+        </div>
+
+        <div class="light-box">
+            <div class="light-visual control">🕹️</div>
+            <div class="content">
+                <h3>Lighting Control Console</h3>
+                <p>**Purpose:** The central desk used to program and manage all lighting fixtures (typically via DMX
+                    protocol). Allows for precise timing and sequencing.</p>
+                <p>**Use:** Essential for complex shows with multiple cues, mood changes, and dynamic effects.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Lighting Setup and Design page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

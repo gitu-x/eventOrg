@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Events Planning: Engagement, Sangeet, Mehendi</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            /* Light blue-gray background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .theme-header {
+            /* Vibrant background suitable for festive social events */
+            background: linear-gradient(rgba(170, 75, 0, 0.6), rgba(255, 165, 0, 0.6)), url('festive-social-event-bg.jpg') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #ff9800;
+            /* Festive accent color: Orange */
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5em;
+            color: #ff9800;
+            background-color: #fff3e0;
+            /* Very light orange background */
+            border-bottom: 3px solid #fb8c00;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #fb8c00;
+            /* Heading Color */
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Vibrant Social Events: Engagement, Sangeet & Mehendi Planning</p>
+            <p>From intimate engagements to grand Sangeet nights, we create unforgettable celebrations with bespoke
+                decor and management.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🎨</div>
+            <div class="content">
+                <h3>Theme & Venue Decoration</h3>
+                <p><strong>Description:</strong> Specializing in vibrant, festive, and traditional decor tailored for
+                    pre-wedding ceremonies.</p>
+                <p><strong>Key Elements:</strong> Marigold/Floral decoration, Colorful Drapes & Fabrics (e.g.,
+                    Rajasthani theme), Customized Stage/Mandap backdrop, Seating arrangement, Lighting setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎶</div>
+            <div class="content">
+                <h3>Sound & Lighting</h3>
+                <p><strong>Description:</strong> Professional technical setup vital for Sangeet dance performances and
+                    energetic music events.</p>
+                <p><strong>Key Elements:</strong> High-quality Sound system (for music and announcements), Stage
+                    Lighting (spotlights, colors), Ambient lighting (fairy lights, lanterns), Power backup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💃</div>
+            <div class="content">
+                <h3>Specialized Entertainment</h3>
+                <p><strong>Description:</strong> Curated entertainment to maximize fun, especially for Sangeet and
+                    Mehendi functions.</p>
+                <p><strong>Key Elements:</strong> Professional DJ/Music Band, Anchor/Host (for games and dance intros),
+                    Choreographers (for family performances), Live performers (Dancers, Singers).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Candid Photography & Videography</h3>
+                <p><strong>Description:</strong> Capturing the candid joy, colors, and high energy of these fun-filled
+                    social gatherings.</p>
+                <p><strong>Key Elements:</strong> Dedicated Candid Photographers, Videographers, Drone coverage (where
+                    permitted), Instant Photo Booths (for guest engagement).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🥘</div>
+            <div class="content">
+                <h3>Bespoke Catering</h3>
+                <p><strong>Description:</strong> Customized menu planning, often focusing on regional specialties,
+                    street food stalls, or interactive food stations.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning, Specialty Food Counters (chaat, dessert),
+                    Professional Serving Staff, Crockery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">✨</div>
+            <div class="content">
+                <h3>Special Decor & Props</h3>
+                <p><strong>Description:</strong> Unique elements that define the mood, especially for Mehendi (vibrant
+                    and cozy) and Engagement (elegant).</p>
+                <p><strong>Key Elements:</strong> Mehendi seating/thrones, Cozy low seating (gaddas), Photo props,
+                    Floral wall backdrops, Custom Entrance setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🤝</div>
+            <div class="content">
+                <h3>Manpower & Guest Management</h3>
+                <p><strong>Description:</strong> Ensuring guests are comfortably managed and directed throughout the
+                    high-traffic events.</p>
+                <p><strong>Key Elements:</strong> Ushers/Helpers for guidance, Security guards, Reception/registration
+                    staff, Cleaners & maintenance staff.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🗺️</div>
+            <div class="content">
+                <h3>Logistics & Permits</h3>
+                <p><strong>Description:</strong> Managing necessary permissions and the movement of guests and material
+                    seamlessly.</p>
+                <p><strong>Key Elements:</strong> Guest transport coordination, Valet parking assistance, Material
+                    movement and setup schedule, Necessary venue permits/licenses.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Social Events Planning page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

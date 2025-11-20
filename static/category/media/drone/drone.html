@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Drone Setup & Operation</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f7;
+            /* Light sky blue background */
+            color: #006064;
+            /* Dark cyan text */
+        }
+
+        /* Header Styling */
+        .drone-header {
+            background: linear-gradient(135deg, #00838f, #004d40);
+            /* Deep teal/cyan gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .drone-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Drone Service Container (Grid Layout) */
+        .drone-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Drone Service Box Styling */
+        .drone-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #00838f;
+            /* Accent color */
+        }
+
+        .drone-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .drone-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #4dd0e1;
+            /* Lighter accent */
+            border-bottom: 3px solid #00838f;
+        }
+
+        .drone-visual.pilot {
+            background-color: #0097a7;
+        }
+
+        /* Pilot */
+        .drone-visual.aircraft {
+            background-color: #66bb6a;
+        }
+
+        /* Aircraft */
+        .drone-visual.camera {
+            background-color: #ffb74d;
+        }
+
+        /* Camera */
+        .drone-visual.safety {
+            background-color: #e57373;
+        }
+
+        /* Safety */
+        .drone-visual.regulations {
+            background-color: #ab47bc;
+        }
+
+        /* Regulations */
+        .drone-visual.weather {
+            background-color: #78909c;
+        }
+
+        /* Weather */
+        .drone-visual.planning {
+            background-color: #ba68c8;
+        }
+
+        /* Flight Planning */
+        .drone-visual.battery {
+            background-color: #fdd835;
+            color: #333;
+        }
+
+        /* Batteries */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #006064;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .drone-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .drone-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="drone-header">
+        <div>
+            <p class="m1">Professional Drone Setup & Operation</p>
+            <p>Elevate your event visuals with stunning aerial photography and videography from certified drone experts.
+            </p>
+        </div>
+    </section>
+
+    <div class="drone-container">
+
+        <div class="drone-box">
+            <div class="drone-visual pilot">👨‍✈️</div>
+            <div class="content">
+                <h3>Certified Drone Pilot & Operator</h3>
+                <p>**Key Requirement:** Always hire a **licensed and experienced drone pilot**. They understand airspace
+                    regulations, flight safety, and optimal camera movements.</p>
+                <p>**Team:** Often works with a visual observer (spotter) for enhanced safety during flights.</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual aircraft">🚁</div>
+            <div class="content">
+                <h3>Drone Aircraft & Specs</h3>
+                <p>**Selection:** Choose drones based on payload (camera size), flight stability, and battery life.
+                    Popular brands include DJI Mavic/Phantom/Inspire series.</p>
+                <p>**Features:** GPS stabilization, obstacle avoidance, return-to-home function are crucial for safety
+                    and smooth operation.</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual camera">🎥</div>
+            <div class="content">
+                <h3>Gimbal & Camera System</h3>
+                <p>**Quality:** High-resolution cameras (4K, 6K) mounted on a 3-axis stabilized gimbal ensure smooth,
+                    cinematic footage even during complex maneuvers.</p>
+                <p>**Lens Options:** Different lenses (wide-angle, zoom) can be used for various aerial shots.</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual battery">🔋</div>
+            <div class="content">
+                <h3>Battery Management & Charging</h3>
+                <p>**Essential:** Multiple fully charged batteries are a must. Each battery offers limited flight time
+                    (typically 15-30 minutes).</p>
+                <p>**Logistics:** On-site charging stations or portable power banks are vital for extended event
+                    coverage.</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual regulations">📜</div>
+            <div class="content">
+                <h3>Permits & Airspace Regulations</h3>
+                <p>**Legal Check:** Obtain all necessary **permits and waivers** from local aviation authorities (e.g.,
+                    FAA in US, DGCA in India) for commercial drone operation, especially near airports or public
+                    gatherings.</p>
+                <p>**No-Fly Zones:** Be aware of restricted airspace and temporary flight restrictions (TFRs).</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual safety">🛑</div>
+            <div class="content">
+                <h3>Safety Protocols & Risk Assessment</h3>
+                <p>**Pre-Flight:** Conduct thorough pre-flight checks. Establish a **safe take-off/landing zone** and
+                    clear flight path, away from crowds.</p>
+                <p>**Emergency:** Have an emergency plan for unexpected events (e.g., drone malfunction, sudden weather
+                    change).</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual weather">☁️</div>
+            <div class="content">
+                <h3>Weather & Environmental Factors</h3>
+                <p>**Impact:** Wind, rain, fog, and extreme temperatures can significantly affect drone flight safety
+                    and footage quality.</p>
+                <p>**Planning:** Always check the weather forecast before and during the event. High winds are a major
+                    concern.</p>
+            </div>
+        </div>
+
+        <div class="drone-box">
+            <div class="drone-visual planning">🗺️</div>
+            <div class="content">
+                <h3>Flight Planning & Shot List</h3>
+                <p>**Strategy:** Work with the client to create a **detailed shot list** and flight plan. This includes
+                    specific angles, altitudes, and duration for each shot.</p>
+                <p>**Communication:** Clearly communicate flight times and areas to event organizers and security
+                    personnel.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Drone Setup & Operation page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

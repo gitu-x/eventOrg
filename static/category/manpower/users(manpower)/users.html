@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ushers & General Manpower Management</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            /* Light blue background (Helpful/Informative theme) */
+            color: #1a237e;
+            /* Dark indigo text */
+        }
+
+        /* Header Styling */
+        .usher-header {
+            background: linear-gradient(135deg, #42a5f5, #1e88e5);
+            /* Bright blue gradient (Guidance/Service) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .usher-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Usher Component Container (Grid Layout) */
+        .usher-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Usher Component Box Styling */
+        .usher-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #42a5f5;
+            /* Accent color */
+        }
+
+        .usher-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .usher-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #90caf9;
+            /* Medium blue accent */
+            border-bottom: 3px solid #42a5f5;
+        }
+
+        .usher-visual.greeting {
+            background-color: #4db6ac;
+        }
+
+        /* Greeting - Teal */
+        .usher-visual.seating {
+            background-color: #ffb74d;
+        }
+
+        /* Seating - Orange */
+        .usher-visual.info {
+            background-color: #8d6e63;
+        }
+
+        /* Information - Brown */
+        .usher-visual.training {
+            background-color: #e57373;
+        }
+
+        /* Training - Red */
+        .usher-visual.uniform {
+            background-color: #5c6bc0;
+        }
+
+        /* Uniform - Indigo */
+        .usher-visual.flow {
+            background-color: #d4e157;
+        }
+
+        /* Flow - Lime */
+        .usher-visual.emergency {
+            background-color: #ff9800;
+        }
+
+        /* Emergency - Amber */
+        .usher-visual.post {
+            background-color: #795548;
+        }
+
+        /* Post Event - Dark Brown */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #1e88e5;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .usher-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .usher-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="usher-header">
+        <div>
+            <p class="m1">Event Ushers & Guest Management Staff</p>
+            <p>The frontline of hospitality: ensuring smooth guest flow, efficient seating, and a positive experience.
+            </p>
+        </div>
+    </section>
+
+    <div class="usher-container">
+
+        <div class="usher-box">
+            <div class="usher-visual greeting">👋</div>
+            <div class="content">
+                <h3>Guest Greeting & Wayfinding</h3>
+                <p>**Role:** First point of contact. Welcome guests warmly, verify invitations/tickets, and provide
+                    immediate direction to cloakrooms, restrooms, or the main hall.</p>
+                <p>**Key Skill:** **Hospitality** and a clear knowledge of the venue layout.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual seating">🪑</div>
+            <div class="content">
+                <h3>Seating Management & Assignment</h3>
+                <p>**Role:** Guiding guests to their assigned tables or rows (especially for formal events). Managing
+                    queues for VIP sections or open seating areas.</p>
+                <p>**Logistics:** Should be equipped with the **seating chart** and a list of reserved seats/tables.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual info">ℹ️</div>
+            <div class="content">
+                <h3>Information & Schedule Assistance</h3>
+                <p>**Role:** Acting as information hubs. Answering general questions about the event schedule, duration,
+                    speaker timings, or parking.</p>
+                <p>**Preparation:** All ushers must know the event schedule and the **FAQ (Frequently Asked Questions)**
+                    document by heart.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual flow">➡️</div>
+            <div class="content">
+                <h3>Traffic Flow & Queue Management</h3>
+                <p>**Role:** Ensuring a smooth, orderly movement of guests, especially during breaks, meal times, or
+                    entry/exit periods.</p>
+                <p>**Focus:** Preventing bottlenecks and keeping aisles clear for safety and accessibility.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual uniform">🤵‍♀️</div>
+            <div class="content">
+                <h3>Uniform & Professional Appearance</h3>
+                <p>**Standard:** Ushers must wear a clean, consistent uniform (e.g., matching shirts, vests, badges) to
+                    be easily identified by guests.</p>
+                <p>**Attitude:** Maintain a **polite, calm, and professional demeanor** even under pressure.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual training">📚</div>
+            <div class="content">
+                <h3>Mandatory Pre-Event Training</h3>
+                <p>**Requirement:** A minimum 1-hour briefing covering venue map, roles, safety protocols, and how to
+                    handle difficult guest interactions.</p>
+                <p>**Communication:** Assign **Team Leaders** to whom ushers can report issues quickly via radio/phone.
+                </p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual emergency">🆘</div>
+            <div class="content">
+                <h3>Emergency & Safety Liaison</h3>
+                <p>**Duty:** Ushers are the first link to safety. They must know the location of fire exits, first-aid
+                    stations, and the designated emergency assembly point.</p>
+                <p>**Protocol:** Report any suspicious activity, medical emergencies, or safety hazards immediately to
+                    Security/First Aid.</p>
+            </div>
+        </div>
+
+        <div class="usher-box">
+            <div class="usher-visual post">🧹</div>
+            <div class="content">
+                <h3>Post-Event Duties (Teardown Support)</h3>
+                <p>**Role:** Assisting guests with departures, ensuring lost-and-found items are collected, and often
+                    helping with initial light teardown tasks (e.g., collecting handouts, folding chairs).</p>
+                <p>**Final Check:** Sweeping the area for misplaced personal belongings or important materials.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Ushers & General Manpower page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

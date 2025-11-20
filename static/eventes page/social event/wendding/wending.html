@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Event Planning & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            /* Light blue-gray background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('wedding-header-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a wedding-related background image */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Theme Box Styling (Renamed to Service Box) */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #a83279;
+            /* Wedding accent color: Deep Pink/Maroon */
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 120px;
+            /* Reduced height for focus on text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5em;
+            color: #a83279;
+            background-color: #fce4ec;
+            /* Very light pink background */
+            border-bottom: 3px solid #d81b60;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #d81b60;
+            /* Heading Color */
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Your Dream Day: Wedding Event Planning & Services</p>
+            <p>Explore our comprehensive wedding planning and execution services to make every moment unforgettable.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue & Setup</h3>
+                <p><strong>Description:</strong> Booking of the best location (venue) and arrangement of complete
+                    decoration tailored to your vision.</p>
+                <p><strong>Key Elements:</strong> Venue booking (banquet, hall, garden, resort), Seating arrangement,
+                    Decoration & theme setup, Stage design / backdrop setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Technical & Infrastructure</h3>
+                <p><strong>Description:</strong> Management of high-quality technical equipment and infrastructure for a
+                    seamless event operation.</p>
+                <p><strong>Key Elements:</strong> Sound system (mic, speakers, mixer), Lighting setup (LED, stage,
+                    ambient), Projector / LED screen, Power backup (generator, UPS).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎥</div>
+            <div class="content">
+                <h3>Media & Coverage</h3>
+                <p><strong>Description:</strong> Professionally capturing your special moments so that memories remain
+                    fresh forever.</p>
+                <p><strong>Key Elements:</strong> Photography & videography, Live streaming / drone shoot, Editing &
+                    album creation.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍽️</div>
+            <div class="content">
+                <h3>Catering Services</h3>
+                <p><strong>Description:</strong> Planning and execution of delicious food and beverage options for your
+                    guests.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning, Waiter staff / serving counters, Crockery,
+                    cutlery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Furniture & Décor</h3>
+                <p><strong>Description:</strong> Selection of comfortable and theme-based furniture and decoration to
+                    enhance the event ambiance.</p>
+                <p><strong>Key Elements:</strong> Chairs, tables, sofa, carpet, stage, Floral & fabric decoration,
+                    Theme-based décor items.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Manpower / Staff</h3>
+                <p><strong>Description:</strong> Provision of trained and courteous staff for the efficient running and
+                    execution of the event.</p>
+                <p><strong>Key Elements:</strong> Security guards, Ushers / helpers, Reception / registration staff,
+                    Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎵</div>
+            <div class="content">
+                <h3>Entertainment</h3>
+                <p><strong>Description:</strong> Arranging live entertainment to add excitement and fun for you and your
+                    guests at the event.</p>
+                <p><strong>Key Elements:</strong> DJ / music band / anchor / host, Dancers / singers / artists, Games /
+                    stage performances.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Transport & Logistics</h3>
+                <p><strong>Description:</strong> Ensuring easy and timely movement of guests and essential materials.
+                </p>
+                <p><strong>Key Elements:</strong> Guest transport & parking management, Material movement.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Wedding Event Planning & Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

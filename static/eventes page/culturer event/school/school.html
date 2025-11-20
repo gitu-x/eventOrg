@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School & College Annual Function Event Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfcf4;
+            /* Very light cream/yellow background */
+            color: #333;
+        }
+
+        /* Color Palette: #dc3545 (Deep Red/Maroon), #ffc107 (Yellow/Gold), #007bff (Blue for text) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(220, 53, 69, 0.8), rgba(220, 53, 69, 0.8)), url('annual-function-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a stage/performance background image */
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #ffc107;
+            /* Yellow/Gold text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 70px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #dc3545;
+            /* Deep Red accent */
+        }
+
+        .service-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.2em;
+            color: #ffc107;
+            /* Yellow/Gold icon color */
+            background-color: #fff8e8;
+            /* Very light yellow background */
+            border-bottom: 2px solid #dc3545;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #007bff;
+            /* Heading Color - Blue for contrast */
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Spotlight on Achievement: Annual Function Event Services</p>
+            <p>Expertly managing all aspects of your academic year-end celebration, ensuring a memorable show for
+                students, staff, and parents.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🎭</div>
+            <div class="content">
+                <h3>Venue & Performance Stage Setup</h3>
+                <p><strong>Description:</strong> Preparing the main auditorium or outdoor area into a grand performance
+                    venue suitable for all acts.</p>
+                <p><strong>Key Elements:</strong> Venue booking (Auditorium, Open ground), Seating for
+                    parents/dignitaries, **Thematic stage design / Backdrop**, Green room and backstage management.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎤</div>
+            <div class="content">
+                <h3>Production Sound & Lighting</h3>
+                <p><strong>Description:</strong> High-quality sound and theatrical lighting necessary for flawless
+                    music, dialogues, and student performances.</p>
+                <p><strong>Key Elements:</strong> Professional sound system (Mics, Speakers, Mixer), **Theatrical
+                    lighting setup** (spotlights, ambient, colours), Projector / LED screens for visuals, Power backup.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Photography & Videography</h3>
+                <p><strong>Description:</strong> Professionally capturing every performance, award moment, and the
+                    general atmosphere of the function.</p>
+                <p><strong>Key Elements:</strong> Multi-camera photography & videography, **Live feed to side screens
+                    (if required)**, Editing of full event video and photo album creation.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">☕</div>
+            <div class="content">
+                <h3>Guest & VIP Refreshments</h3>
+                <p><strong>Description:</strong> Providing light refreshments and meals for staff, special guests, and
+                    student volunteers.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning (snacks/light dinner), Waiter staff / serving
+                    counters, Dedicated **VIP lounge catering**, Crockery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Seating & Functional Decor</h3>
+                <p><strong>Description:</strong> Arrangement of seating for the audience and functional elements for
+                    awards and presentations.</p>
+                <p><strong>Key Elements:</strong> Audience seating, **Dignitary seating on stage/front row**,
+                    Academic/Ceremonial décor items, Signage and directional aids.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Student & Guest Flow Management</h3>
+                <p><strong>Description:</strong> Dedicated staff for crowd control, seating guidance, and assisting
+                    students backstage.</p>
+                <p><strong>Key Elements:</strong> Security guards / Bouncers, **Ushers / Volunteers for parent
+                    seating**, Backstage support staff for quick changes, Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🏆</div>
+            <div class="content">
+                <h3>Program Scripting & Awards Management</h3>
+                <p><strong>Description:</strong> Assistance in structuring the entire program flow, including
+                    performance cues, announcements, and award presentations.</p>
+                <p><strong>Key Elements:</strong> **Professional Anchor / Compère**, Scripting & cue sheet management,
+                    Coordination of student entry/exit for performances, Awards display & handling.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Logistics & Parking Management</h3>
+                <p><strong>Description:</strong> Ensuring organized parking and safe entry/exit for a large volume of
+                    parents and vehicles.</p>
+                <p><strong>Key Elements:</strong> Guest transport & **parent parking management**, Material movement
+                    (props, costumes, equipment), Entry / exit coordination.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("School/College Annual Function Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projector & Display Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            /* Light cyan/blue background */
+            color: #004d40;
+        }
+
+        /* Header Styling */
+        .display-header {
+            background: linear-gradient(135deg, #00acc1, #00838f);
+            /* Teal/Cyan gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .display-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Display Component Container (Grid Layout) */
+        .display-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Display Component Box Styling */
+        .display-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #00acc1;
+            /* Accent color */
+        }
+
+        .display-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .display-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #4dd0e1;
+            /* Lighter accent */
+            border-bottom: 3px solid #00acc1;
+        }
+
+        .display-visual.projector {
+            background-color: #00bcd4;
+        }
+
+        /* Projector */
+        .display-visual.led {
+            background-color: #66bb6a;
+        }
+
+        /* LED Wall */
+        .display-visual.screen {
+            background-color: #ff8a65;
+        }
+
+        /* Screen */
+        .display-visual.switcher {
+            background-color: #ab47bc;
+        }
+
+        /* Switcher */
+        .display-visual.res {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+
+        /* Resolution */
+        .display-visual.imac {
+            background-color: #8d6e63;
+        }
+
+        /* Confidence Monitor */
+        .display-visual.mapping {
+            background-color: #f06292;
+        }
+
+        /* Mapping */
+        .display-visual.camera {
+            background-color: #263238;
+        }
+
+        /* Camera */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #00838f;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .display-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .display-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="display-header">
+        <div>
+            <p class="m1">Projector & Digital Display Solutions</p>
+            <p>Ensure crystal-clear visuals and stunning presentations with the right display technology for your event.
+            </p>
+        </div>
+    </section>
+
+    <div class="display-container">
+
+        <div class="display-box">
+            <div class="display-visual projector">📽️</div>
+            <div class="content">
+                <h3>Projectors (Brightness & Resolution)</h3>
+                <p>**Key Factor:** **Lumens (Brightness)** must match the room's ambient light. Choose high **Resolution
+                    (1080p or 4K)** for crisp graphics and video.</p>
+                <p>**Use:** Large screens where high brightness is critical (e.g., conferences, movie nights).</p>
+            </div>
+        </div>
+
+        <div class="display-box">
+            <div class="display-visual led">📺</div>
+            <div class="content">
+                <h3>LED Walls / Video Walls</h3>
+                <p>**Key Factor:** Offers superior **brightness, contrast, and seamless scaling** without shadows.
+                    Excellent for brightly lit rooms and outdoor events.</p>
+                <p>**Use:** Concerts, large corporate backdrops, outdoor screenings, live broadcasting events.</p>
+            </div>
+        </div>
+
+        <div class="display-box">
+            <div class="display-visual screen">⬜</div>
+            <div class="content">
+                <h3>Projection Screens (Type & Size)</h3>
+                <p>**Key Factor:** Choose **Rear Projection** (projector behind screen) for a clean stage look and to
+                    prevent speaker shadows. Size should be 1/6th of viewing distance.</p>
+                <p>**Use:** Conference presentations, background scenery, simultaneous content display.</p>
+            </div>
+        </div>
+
+        <div class="display-box">
+            <div class="display-visual switcher">🔀</div>
+            <div class="content">
+                <h3>Video Switcher / Scaler</h3>
+                <p>**Key Factor:** Allows for **seamless transition** between multiple input sources (laptops, cameras,
+                    videos) without the screen going black (glitching).</p>
+                <p>**Use:** Any event with more than one presenter or multiple video sources.</p>
+            </div>
+        </div>
+
+        <div class="display-box">
+            <div class="display-visual imac">👁️‍🗨️</div>
+            <div class="content">
+                <h3>Confidence Monitors</h3>
+                <p>**Key Factor:** Small monitors placed **on the floor, facing the speaker**. They display the current
+                    slide and/or speaker notes privately.</p>
+                <p>**Use:** Essential for professional speakers to maintain eye contact with the audience, not the main
+                    screen.</p>
+            </div>
+        </div>
+
+        <div class="display-box">
+            <div class="display-visual res">🔗</div>
+            <div class="content">
+                <h3>Video Distribution & Cables</h3>
+                <p>**Key Factor:** Use **SDI or Fiber Optic** cables for long distances (>2

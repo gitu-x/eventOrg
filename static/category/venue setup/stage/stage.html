@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Stage Design & Arrangement</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            /* Light neutral background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .stage-header {
+            background: url('pt12.jpg') center/cover no-repeat;
+            /* Deep blue gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .stage-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Stage Container (Grid Layout) */
+        .stage-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Stage Box Styling */
+        .stage-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #1c2e4a;
+            /* Accent color */
+        }
+
+        .stage-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .stage-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #4a69bd;
+            border-bottom: 3px solid #1c2e4a;
+        }
+
+        .stage-visual.proscenium {
+            background-color: #00796b;
+        }
+
+        .stage-visual.thrust {
+            background-color: #d84315;
+        }
+
+        .stage-visual.arena {
+            background-color: #5d4037;
+        }
+
+        .stage-visual.platform {
+            background-color: #4527a0;
+        }
+
+        .stage-visual.catwalk {
+            background-color: #c62828;
+        }
+
+        .stage-visual.modular {
+            background-color: #388e3c;
+        }
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #1c2e4a;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .stage-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stage-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="stage-header">
+        <div>
+            <p class="m1">Essential Event Stage Designs</p>
+            <p>Select the optimal stage arrangement to maximize audience engagement and performance visibility.</p>
+        </div>
+    </section>
+
+    <div class="stage-container">
+
+        <div class="stage-box">
+            <div class="stage-visual proscenium">🖼️</div>
+            <div class="content">
+                <h3>Proscenium Stage (End Stage)</h3>
+                <p>**Focus:** Classic "picture frame" stage where the audience faces one side. Great for large
+                    theatrical, musical, or corporate presentations requiring a backdrop.</p>
+                <p>**Best For:** Concerts, product launches with large screens, formal addresses.</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual thrust">➡️</div>
+            <div class="content">
+                <h3>Thrust Stage</h3>
+                <p>**Focus:** The stage "thrusts" into the audience, who sit on three sides. Increases intimacy and
+                    provides multiple viewing angles.</p>
+                <p>**Best For:** Fashion shows, interactive performances, debates, and speaker Q&A sessions.</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual arena">360°</div>
+            <div class="content">
+                <h3>Arena / In the Round</h3>
+                <p>**Focus:** The stage is central, with the audience surrounding it on all four sides (360 degrees).
+                    Creates the most intense intimacy and energy.</p>
+                <p>**Best For:** Wrestling, central music performances (e.g., boxing/sports events), large experiential
+                    events.</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual platform">⬆️</div>
+            <div class="content">
+                <h3>Platform Stage</h3>
+                <p>**Focus:** A simple, raised area without elaborate curtains or backdrops. Used primarily to ensure
+                    visibility above the crowd.</p>
+                <p>**Best For:** Speeches in a banquet hall, DJ setups, small press conferences, quick awards
+                    ceremonies.</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual catwalk">🚶‍♀️</div>
+            <div class="content">
+                <h3>Catwalk / Runway Stage</h3>
+                <p>**Focus:** A long, narrow stage extending into the audience, often used for display or movement.
+                    Maximizes interaction and visual exposure.</p>
+                <p>**Best For:** Fashion shows, product demonstrations, dance performances, bridal entry at weddings.
+                </p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual modular">🧩</div>
+            <div class="content">
+                <h3>Modular Stage</h3>
+                <p>**Focus:** Sections of staging that can be easily rearranged to fit different layouts (e.g., split
+                    stage, tiered stage). Highly flexible and adaptable.</p>
+                <p>**Best For:** Events with multiple segments (e.g., a corporate event that needs a stage for a
+                    speaker, then a platform for a band).</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual tiers">🪜</div>
+            <div class="content">
+                <h3>Tiered Stage (Multilevel)</h3>
+                <p>**Focus:** A stage with multiple height levels (steps or platforms). Adds visual depth and allows
+                    many performers to be seen simultaneously.</p>
+                <p>**Best For:** Large choral performances, band setups with drums/keyboards, group panel discussions,
+                    photo opportunities.</p>
+            </div>
+        </div>
+
+        <div class="stage-box">
+            <div class="stage-visual corner">📐</div>
+            <div class="content">
+                <h3>Corner Stage</h3>
+                <p>**Focus:** Placed in the corner of a room, saving floor space while still providing a focal point.
+                    Utilizes the room's natural layout.</p>
+                <p>**Best For:** Lounge events, small acoustic sets, comedy acts, where the stage is a background
+                    element.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Stage Design and Arrangements page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Program & Workshop Event Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fcf8;
+            /* Light, clean background */
+            color: #333;
+        }
+
+        /* Color Palette: #28a745 (Success/Growth Green), #1e7e34 (Dark Green), #6c757d (Gray) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(40, 167, 69, 0.75), rgba(40, 167, 69, 0.75)), url('training-workshop-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a focused, learning-oriented background image */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 750px;
+            margin: 15px auto 0;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #28a745;
+            /* Learning accent color: Green */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.8em;
+            color: #1e7e34;
+            background-color: #e6ffed;
+            /* Very light green background */
+            border-bottom: 2px solid #28a745;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #1e7e34;
+            /* Heading Color */
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.0em;
+            line-height: 1.5;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Focused Learning: Training Program & Corporate Workshop Services</p>
+            <p>Creating productive and engaging environments perfect for knowledge transfer, skill-building, and team
+                development.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue & Flexible Setup</h3>
+                <p><strong>Description:</strong> Sourcing and setting up rooms ideal for interactive learning, group
+                    work, and lectures.</p>
+                <p><strong>Key Elements:</strong> Venue booking (training rooms, breakout spaces), **Flexible seating
+                    arrangement** (U-shape, clusters), Minimalist decoration, Stage / presenter area setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Training A/V & Equipment</h3>
+                <p><strong>Description:</strong> Reliable audio-visual and technical support for presentations, video
+                    playback, and remote connections.</p>
+                <p><strong>Key Elements:</strong> Sound system (Wireless mics for Q&A), Lighting setup, Projector /
+                    **Interactive screens / Whiteboards**, Power backup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📝</div>
+            <div class="content">
+                <h3>Materials & Documentation</h3>
+                <p><strong>Description:</strong> Preparation and distribution of all necessary training manuals,
+                    stationery, and session recordings.</p>
+                <p><strong>Key Elements:</strong> **Training material printing**, Notepads & pens, Basic photography
+                    (for archival/internal use), Recording of key sessions.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">☕</div>
+            <div class="content">
+                <h3>Refreshments & F&B</h3>
+                <p><strong>Description:</strong> Providing brain-fueling food and beverage options for breaks and
+                    lunches to maintain focus.</p>
+                <p><strong>Key Elements:</strong> Food & beverage planning (healthy options), **Continuous coffee/tea
+                    service**, Waiter staff / serving counters, Crockery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Functional Furniture & Signage</h3>
+                <p><strong>Description:</strong> Comfortable seating and essential functional items to facilitate a
+                    seamless learning experience.</p>
+                <p><strong>Key Elements:</strong> Ergonomic chairs and tables, Flip charts / Whiteboards, **Directional
+                    and information signage**, Basic professional décor.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Operational Support Staff</h3>
+                <p><strong>Description:</strong> Discreet staff to manage registration, guide participants, and provide
+                    immediate assistance to trainers.</p>
+                <p><strong>Key Elements:</strong> Ushers / helpers, **Registration/Check-in staff**, On-site technical
+                    support, Cleaners & facility maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Participant Logistics</h3>
+                <p><strong>Description:</strong> Managing the smooth arrival, movement, and departure of participants
+                    and trainers.</p>
+                <p><strong>Key Elements:</strong> Participant transport & parking management, Material movement
+                    (equipment/handouts), Entry / exit coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧩</div>
+            <div class="content">
+                <h3>Interactive & Break Activities</h3>
+                <p><strong>Description:</strong> Arranging short activities or light hosting to facilitate team bonding
+                    and engagement during scheduled breaks.</p>
+                <p><strong>Key Elements:</strong> **Team-building games / Icebreakers**, Break music (ambient),
+                    Host/Facilitator (if required for large groups).</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Training Program & Workshop Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

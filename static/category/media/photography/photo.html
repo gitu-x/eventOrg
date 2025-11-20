@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Photography Setup & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8e8;
+            /* Light cream background */
+            color: #3e2723;
+            /* Dark brown text */
+        }
+
+        /* Header Styling */
+        .photo-header {
+            background: linear-gradient(135deg, #a1887f, #6d4c41);
+            /* Warm brown/earthy gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .photo-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Photo Service Container (Grid Layout) */
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Photo Service Box Styling */
+        .photo-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #a1887f;
+            /* Accent color */
+        }
+
+        .photo-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .photo-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #bcaaa4;
+            /* Lighter brown accent */
+            border-bottom: 3px solid #a1887f;
+        }
+
+        .photo-visual.photographers {
+            background-color: #6d4c41;
+        }
+
+        /* Dark Brown */
+        .photo-visual.candid {
+            background-color: #ef9a9a;
+        }
+
+        /* Light Red */
+        .photo-visual.portraits {
+            background-color: #90a4ae;
+        }
+
+        /* Blue Grey */
+        .photo-visual.equipment {
+            background-color: #ffee58;
+            color: #333;
+        }
+
+        /* Yellow */
+        .photo-visual.lighting {
+            background-color: #ff8a65;
+        }
+
+        /* Orange */
+        .photo-visual.booth {
+            background-color: #4db6ac;
+        }
+
+        /* Teal */
+        .photo-visual.delivery {
+            background-color: #ba68c8;
+        }
+
+        /* Purple */
+        .photo-visual.drone {
+            background-color: #81c784;
+        }
+
+        /* Green */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #6d4c41;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .photo-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .photo-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="photo-header">
+        <div>
+            <p class="m1">Event Photography Setup & Services</p>
+            <p>Capture every memorable moment with professional photographers and custom photo experiences.</p>
+        </div>
+    </section>
+
+    <div class="photo-container">
+
+        <div class="photo-box">
+            <div class="photo-visual photographers">📸</div>
+            <div class="content">
+                <h3>Professional Photographers</h3>
+                <p>**Key Service:** Hiring experienced photographers (single or multiple) based on event size and
+                    coverage needs. Discuss their portfolio and style beforehand.</p>
+                <p>**Coverage:** From arrival to departure, ensuring all key individuals and moments are documented.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual candid"> sponta.</div>
+            <div class="content">
+                <h3>Candid Photography</h3>
+                <p>**Style:** Capturing unposed, natural, and emotional moments without directing subjects. Creates
+                    authentic memories.</p>
+                <p>**Best For:** Weddings, social gatherings, corporate celebrations where genuine reactions are
+                    desired.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual portraits">🤵👰</div>
+            <div class="content">
+                <h3>Formal & Group Portraits</h3>
+                <p>**Style:** Structured photography for specific individuals (VIPs), couples, or groups (team photos).
+                    Often done in a designated area.</p>
+                <p>**Importance:** Provides high-quality, professional images for official records, PR, or family
+                    albums.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual equipment">📷✨</div>
+            <div class="content">
+                <h3>Essential Gear & Lenses</h3>
+                <p>**Equipment:** High-resolution DSLR/Mirrorless cameras, various lenses (wide-angle for venue,
+                    telephoto for close-ups, prime for portraits), tripods/monopods.</p>
+                <p>**Redundancy:** Professionals often carry backup cameras and lenses to avoid mishaps.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual lighting">🔆</div>
+            <div class="content">
+                <h3>On-site Lighting Setup</h3>
+                <p>**Gear:** External flashes (speedlights), softboxes, LED panels, and reflectors to ensure well-lit
+                    photos regardless of ambient conditions.</p>
+                <p>**Technique:** Proper lighting minimizes harsh shadows and enhances subject clarity, especially
+                    indoors or at night.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual booth">🥳</div>
+            <div class="content">
+                <h3>Photo Booth & Props</h3>
+                <p>**Interactive Fun:** A dedicated area with a backdrop, props (wigs, hats, signs), and often an
+                    instant print facility. Enhances guest engagement.</p>
+                <p>**Customization:** Can be themed to match your event for personalized memories.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual drone">🚁</div>
+            <div class="content">
+                <h3>Drone Photography & Videography</h3>
+                <p>**Unique Perspective:** Captures stunning aerial shots of the venue, large group photos, or dynamic
+                    video footage of outdoor events.</p>
+                <p>**Consideration:** Requires a licensed drone pilot and adherence to local airspace regulations.</p>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <div class="photo-visual delivery">💾</div>
+            <div class="content">
+                <h3>Photo Delivery & Post-Processing</h3>
+                <p>**Service:** Includes professional editing, color correction, and retouching. Final images are
+                    delivered via online gallery, USB, or print albums.</p>
+                <p>**Timeline:** Agree on a clear delivery timeline for edited photos and videos post-event.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Photography Setup & Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

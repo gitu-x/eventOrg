@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Power Backup & Electrical Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+            /* Light pink-red background */
+            color: #311b92;
+            /* Dark violet text */
+        }
+
+        /* Header Styling */
+        .power-header {
+            background: linear-gradient(135deg, #d81b60, #880e4f);
+            /* Deep red/pink gradient (Urgency/Safety) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .power-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Power Component Container (Grid Layout) */
+        .power-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Power Component Box Styling */
+        .power-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #d81b60;
+            /* Accent color */
+        }
+
+        .power-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .power-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #f06292;
+            /* Medium pink */
+            border-bottom: 3px solid #d81b60;
+        }
+
+        .power-visual.generator {
+            background-color: #ffb300;
+        }
+
+        /* Generator - Yellow/Amber */
+        .power-visual.ups {
+            background-color: #00bcd4;
+        }
+
+        /* UPS - Cyan/Blue */
+        .power-visual.load {
+            background-color: #e53935;
+        }
+
+        /* Load Calculation - Red */
+        .power-visual.distribution {
+            background-color: #43a047;
+        }
+
+        /* Distribution - Green */
+        .power-visual.fuel {
+            background-color: #795548;
+        }
+
+        /* Fuel/Testing - Brown */
+        .power-visual.safety {
+            background-color: #3f51b5;
+        }
+
+        /* Safety - Indigo */
+        .power-visual.transfer {
+            background-color: #ff9800;
+        }
+
+        /* Transfer Switch - Orange */
+        .power-visual.monitoring {
+            background-color: #9e9e9e;
+        }
+
+        /* Monitoring - Grey */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #d81b60;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .power-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .power-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="power-header">
+        <div>
+            <p class="m1">Essential Event Power & Backup Planning</p>
+            <p>Ensure an uninterrupted event with professional power solutions and critical safety checks.</p>
+        </div>
+    </section>
+
+    <div class="power-container">
+
+        <div class="power-box">
+            <div class="power-visual load">⚡</div>
+            <div class="content">
+                <h3>Power Load Calculation (KVA)</h3>
+                <p>**Key Step:** Accurately calculate the total **power consumption** of ALL equipment (lights, sound,
+                    displays, catering) to determine the size of the required backup system.</p>
+                <p>**Safety Margin:** Always factor in an additional **25-30% buffer** for safety and starting current.
+                </p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual generator">🔋</div>
+            <div class="content">
+                <h3>Diesel Generator (DG) Set</h3>
+                <p>**Primary Backup:** Essential for outdoor or high-power consumption events. Choose a
+                    **Silent/Acoustic** enclosure to minimize noise pollution near the venue.</p>
+                <p>**Consideration:** Must be installed away from the main venue with proper **earthing** and
+                    ventilation.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual ups">🔌</div>
+            <div class="content">
+                <h3>UPS (Uninterruptible Power Supply)</h3>
+                <p>**Critical Use:** Provides **instant power** (zero downtime) for sensitive equipment like computers,
+                    audio mixers, and lighting consoles until the main generator starts.</p>
+                <p>**Benefit:** Prevents data loss and audio/video glitches during the critical few seconds of power
+                    switchover.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual transfer">🔁</div>
+            <div class="content">
+                <h3>Transfer Switch (ATS/MTS)</h3>
+                <p>**Function:** A switch that safely and efficiently moves the electrical load from the main grid
+                    source to the backup generator source when power fails.</p>
+                <p>**Importance:** Prevents dangerous **back-feeding** of power into the grid, protecting utility
+                    workers.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual distribution">🟢</div>
+            <div class="content">
+                <h3>Power Distribution Boxes (PDBs)</h3>
+                <p>**Core Requirement:** The central unit that takes the main power feed (from grid or DG) and splits it
+                    into multiple **individually fused circuits** (Audio, Lighting, Video).</p>
+                <p>**Advantage:** Isolates faults; if the light circuit trips, the audio and video systems remain
+                    running.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual safety">🛑</div>
+            <div class="content">
+                <h3>Electrical Safety & Earthing</h3>
+                <p>**Priority:** All main equipment and distribution boxes must have proper **Earthing (Grounding)** to
+                    prevent shock hazards and equipment damage.</p>
+                <p>**Check:** Use **RCDs (Residual Current Devices)** on sensitive circuits for instantaneous power
+                    cut-off in case of leakage.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual fuel">⛽</div>
+            <div class="content">
+                <h3>Fuel & Run Time Planning</h3>
+                <p>**Logistics:** Ensure the DG set has enough fuel for the **entire duration of the event plus a 25%
+                    reserve**. Arrange for on-site fuel management if the event is multi-day.</p>
+                <p>**Testing:** A **load bank test** must be performed on the DG set before installation to confirm its
+                    output capacity.</p>
+            </div>
+        </div>
+
+        <div class="power-box">
+            <div class="power-visual monitoring">🚧</div>
+            <div class="content">
+                <h3>Cable Management & Protection</h3>
+                <p>**Safety:** All cables must be correctly rated and protected with **cable ramps/trays** where they
+                    cross public pathways. Never run power cables through waterlogged areas.</p>
+                <p>**Best Practice:** Keep power and audio/video cables **physically separate** to prevent audio
+                    hum/interference.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Power Backup and Electrical Setup page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

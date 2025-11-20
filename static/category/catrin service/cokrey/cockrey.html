@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crockery, Cutlery & Glassware Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+            /* Light pink background (Elegant theme) */
+            color: #4e342e;
+            /* Dark brown text */
+        }
+
+        /* Header Styling */
+        .crockery-header {
+            background: linear-gradient(135deg, #d81b60, #880e4f);
+            /* Deep magenta/red gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .crockery-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Crockery Component Container (Grid Layout) */
+        .crockery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Crockery Component Box Styling */
+        .crockery-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #d81b60;
+            /* Accent color */
+        }
+
+        .crockery-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .crockery-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #ff80ab;
+            /* Medium pink accent */
+            border-bottom: 3px solid #d81b60;
+        }
+
+        .crockery-visual.plates {
+            background-color: #00bcd4;
+        }
+
+        /* Plates - Cyan */
+        .crockery-visual.cutlery {
+            background-color: #757575;
+        }
+
+        /* Cutlery - Grey */
+        .crockery-visual.glassware {
+            background-color: #4fc3f7;
+        }
+
+        /* Glassware - Light Blue */
+        .crockery-visual.buffet {
+            background-color: #8bc34a;
+        }
+
+        /* Buffet Setup - Green */
+        .crockery-visual.qty {
+            background-color: #ff9800;
+        }
+
+        /* Quantity - Orange */
+        .crockery-visual.hygiene {
+            background-color: #43a047;
+        }
+
+        /* Hygiene - Dark Green */
+        .crockery-visual.disposal {
+            background-color: #ab47bc;
+        }
+
+        /* Disposal - Purple */
+        .crockery-visual.placement {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+
+        /* Placement - Yellow */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #d81b60;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .crockery-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .crockery-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="crockery-header">
+        <div>
+            <p class="m1">Crockery, Cutlery & Glassware Essentials</p>
+            <p>Ensure a flawless dining experience with high-quality, immaculate, and properly placed tableware.</p>
+        </div>
+    </section>
+
+    <div class="crockery-container">
+
+        <div class="crockery-box">
+            <div class="crockery-visual plates">🍽️</div>
+            <div class="content">
+                <h3>Plates & Bowls (The Crockery)</h3>
+                <p>**Variety:** Dinner plates (main course), Salad/Appetizer plates, Bread plates, and Dessert bowls.
+                    Choose material (**Porcelain** for elegance, **Ceramic** for rustic).</p>
+                <p>**Requirement:** Must be **pre-warmed** for hot food and chilled for cold items before service.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual cutlery">🍴</div>
+            <div class="content">
+                <h3>Cutlery (The Flatware)</h3>
+                <p>**Variety:** Forks, knives, spoons (soup, dessert, teaspoon). Ensure quality stainless steel,
+                    polished and spot-free.</p>
+                <p>**Placement:** Laid out in the order of use (**outside-in**) for plated service, or neatly
+                    bundled/wrapped for buffet.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual glassware">🍷</div>
+            <div class="content">
+                <h3>Glassware & Stemware</h3>
+                <p>**Variety:** Water glasses, wine glasses (red/white), champagne flutes, and specialized glasses for
+                    cocktails/mocktails. Avoid using plastic/disposable if possible.</p>
+                <p>**Check:** Must be sparkling clean, without water spots or streaks. Hold glasses by the stem or base.
+                </p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual placement">✨</div>
+            <div class="content">
+                <h3>Table Placement & Settings</h3>
+                <p>**Standard:** Place the **show plate** (or dinner plate) in the center. Forks on the left, Knives and
+                    Spoons on the right. Glassware top-right.</p>
+                <p>**Napkin:** Use high-quality cloth napkins, neatly folded, placed on the plate or to the left of the
+                    forks.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual qty">🔢</div>
+            <div class="content">
+                <h3>Quantity & Backup Stock</h3>
+                <p>**Calculation:** Order **1.5 to 2 times** the expected guest count for plates/cutlery to account for
+                    breaks, drops, and guests using multiple sets (especially for buffet).</p>
+                <p>**Crucial:** Ensure enough **tea/coffee cups and dessert spoons** for the last service phase.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual buffet">🍛🍽️</div>
+            <div class="content">
+                <h3>Buffet Service Strategy</h3>
+                <p>**Setup:** Place a **fresh stack of clean plates** at the *start* of the buffet line. Never allow
+                    guests to reuse their plates.</p>
+                <p>**Cutlery:** Best provided in a separate, easily accessible location *after* the food line, often
+                    wrapped in napkins.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual hygiene">🧼</div>
+            <div class="content">
+                <h3>Hygiene & Sanitization</h3>
+                <p>**Standard:** All items must be thoroughly washed, sterilized, and handled with gloves during setup
+                    and transport.</p>
+                <p>**Storage:** Transport and store clean items in **covered containers** until the moment of placement
+                    to prevent dust or contamination.</p>
+            </div>
+        </div>
+
+        <div class="crockery-box">
+            <div class="crockery-visual disposal">♻️</div>
+            <div class="content">
+                <h3>Clearance & Dish Disposal</h3>
+                <p>**System:** Implement a quick system for clearing tables and counters. Use bus tubs or dedicated
+                    carts that keep **food waste and dishes separate**.</p>
+                <p>**Staffing:** Adequate **busing staff** is required to ensure empty plates are removed swiftly,
+                    maintaining a clean look and clear space.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Crockery, Cutlery & Glassware Setup page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

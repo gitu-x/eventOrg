@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Performance & Artist Management</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe0b2;
+            /* Light orange/gold background (Performance theme) */
+            color: #6d4c41;
+            /* Dark brown text */
+        }
+
+        /* Header Styling */
+        .performance-header {
+            background: linear-gradient(135deg, #ff9800, #e65100);
+            /* Deep orange/fire gradient (Energy) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .performance-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Performance Component Container (Grid Layout) */
+        .performance-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Performance Component Box Styling */
+        .performance-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #ff9800;
+            /* Accent color */
+        }
+
+        .performance-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .performance-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #ffb74d;
+            /* Light orange accent */
+            border-bottom: 3px solid #ff9800;
+        }
+
+        .performance-visual.rider {
+            background-color: #d81b60;
+        }
+
+        /* Rider - Red */
+        .performance-visual.rehearsal {
+            background-color: #00bcd4;
+        }
+
+        /* Rehearsal - Cyan */
+        .performance-visual.staging {
+            background-color: #43a047;
+        }
+
+        /* Staging - Green */
+        .performance-visual.dressing {
+            background-color: #90a4ae;
+        }
+
+        /* Dressing Room - Grey */
+        .performance-visual.sound {
+            background-color: #ab47bc;
+        }
+
+        /* Sound Check - Purple */
+        .performance-visual.artists {
+            background-color: #3f51b5;
+        }
+
+        /* Artists - Indigo */
+        .performance-visual.fees {
+            background-color: #fdd835;
+            color: #333;
+        }
+
+        /* Fees - Yellow */
+        .performance-visual.timing {
+            background-color: #795548;
+        }
+
+        /* Timing - Brown */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #e65100;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .performance-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .performance-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="performance-header">
+        <div>
+            <p class="m1">Live Performance & Artist Management</p>
+            <p>Managing the logistics, technical needs, and comfort of live acts, bands, and performers for a stellar
+                show.</p>
+        </div>
+    </section>
+
+    <div class="performance-container">
+
+        <div class="performance-box">
+            <div class="performance-visual artists">🎸</div>
+            <div class="content">
+                <h3>Artist Selection & Type</h3>
+                <p>**Variety:** Determine the type of act (Live Band, Classical Dancer, Stand-up Comedian, Magician)
+                    that best suits the event theme and audience demographic.</p>
+                <p>**Contract:** Finalize the performance date, time, duration, and **cancellation clause** in the
+                    agreement.</p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual rider">📝</div>
+            <div class="content">
+                <h3>Technical & Hospitality Rider</h3>
+                <p>**Crucial:** The artist's **Tech Rider** lists all required sound/light equipment (mics, monitors,
+                    instruments). The **Hospitality Rider** details food, water, transportation, and dressing room
+                    needs.</p>
+                <p>**Compliance:** Ensure the venue can meet all specified requirements before finalizing the booking.
+                </p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual staging">🪜</div>
+            <div class="content">
+                <h3>Stage Plot & Staging Layout</h3>
+                <p>**Plan:** A diagram showing the exact placement of every musician, instrument, monitor speaker, and
+                    microphone on the stage.</p>
+                <p>**Logistics:** This plan is vital for the technical team to complete stage setup (patching)
+                    efficiently and correctly.</p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual sound">🎚️</div>
+            <div class="content">
+                <h3>Sound Check & Monitor Mix</h3>
+                <p>**Timing:** Schedule a dedicated **sound check session** well before doors open. This is
+                    non-negotiable for live acts.</p>
+                <p>**Monitor Mix:** The artist needs a custom **Monitor Mix** (what they hear on stage) to perform
+                    effectively. This is managed by the Sound Engineer.</p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual dressing">🚪</div>
+            <div class="content">
+                <h3>Dressing Room & Green Room</h3>
+                <p>**Comfort:** A clean, private, climate-controlled space (Green Room) for the artists to relax,
+                    change, and prepare.</p>
+                <p>**Amenities:** Must include private restroom access, basic furniture, mirrors, and items requested in
+                    the Hospitality Rider.</p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual rehearsal">⏳</div>
+            <div class="content">
+                <h3>Rehearsal & Entrance Timing</h3>
+                <p>**Run-Through:** If the act involves the MC or background dancers, a brief rehearsal is necessary to
+                    confirm **stage entries, exits, and lighting cues**.</p>
+                <p>**Cue Time:** Clearly communicate the exact **"hold" and "go" times** to the stage manager and the
+                    artist liaison.</p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual fees">💲</div>
+            <div class="content">
+                <h3>Fees, Advances & Payments</h3>
+                <p>**Finance:** Clearly define the payment structure (e.g., 50% advance, 50% post-performance). Ensure
+                    the final payment is ready **on-site** if required by the contract.</p>
+                <p>**Taxes:** Clarify responsibility for performance taxes, service tax, or any required withholding.
+                </p>
+            </div>
+        </div>
+
+        <div class="performance-box">
+            <div class="performance-visual timing">⏱️</div>
+            <div class="content">
+                <h3>Performance Scheduling & Run of Show</h3>
+                <p>**Flow:** Integrate the performance seamlessly into the overall event run-of-show. Avoid placing key
+                    acts immediately after long speeches or during dinner service.</p>
+                <p>**Duration:** Stick strictly to the contracted performance duration to avoid disrupting later acts or
+                    the venue's curfew.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Live Performance & Artist Management page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

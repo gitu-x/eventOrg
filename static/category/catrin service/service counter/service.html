@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Service Counter & Station Design</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9;
+            /* Light green/mint background */
+            color: #1b5e20;
+            /* Dark green text */
+        }
+
+        /* Header Styling */
+        .counter-header {
+            background: linear-gradient(135deg, #388e3c, #1b5e20);
+            /* Deep green gradient (Fresh/Earthy) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .counter-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Counter Service Container (Grid Layout) */
+        .counter-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Counter Service Box Styling */
+        .counter-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #388e3c;
+            /* Accent color */
+        }
+
+        .counter-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .counter-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #66bb6a;
+            /* Medium green accent */
+            border-bottom: 3px solid #388e3c;
+        }
+
+        .counter-visual.buffet {
+            background-color: #fdd835;
+            color: #333;
+        }
+
+        /* Buffet - Yellow */
+        .counter-visual.bar {
+            background-color: #29b6f6;
+        }
+
+        /* Bar - Light Blue */
+        .counter-visual.live {
+            background-color: #ff9800;
+        }
+
+        /* Live Station - Orange */
+        .counter-visual.dessert {
+            background-color: #ec407a;
+        }
+
+        /* Dessert - Pink */
+        .counter-visual.vip {
+            background-color: #5e35b1;
+        }
+
+        /* VIP - Purple */
+        .counter-visual.hightop {
+            background-color: #795548;
+        }
+
+        /* High-Top - Brown */
+        .counter-visual.clearance {
+            background-color: #d81b60;
+        }
+
+        /* Clearance - Red */
+        .counter-visual.flow {
+            background-color: #4db6ac;
+        }
+
+        /* Flow - Teal */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #388e3c;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .counter-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .counter-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="counter-header">
+        <div>
+            <p class="m1">Catering Service Counter & Station Design</p>
+            <p>Optimize guest flow and presentation with strategically designed and themed service counters for all
+                cuisine types.</p>
+        </div>
+    </section>
+
+    <div class="counter-container">
+
+        <div class="counter-box">
+            <div class="counter-visual buffet">🍛</div>
+            <div class="content">
+                <h3>Main Buffet Line</h3>
+                <p>**Design:** Long, single-sided or double-sided counters. Must ensure easy access from both sides.
+                    Keep **Hot and Cold sections separate**.</p>
+                <p>**Placement:** Located away from main seating to prevent congestion, allowing space for the queue.
+                </p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual bar">🍹</div>
+            <div class="content">
+                <h3>Beverage & Bar Counters</h3>
+                <p>**Design:** Typically a high-top counter for bartender access. Should be brightly lit and placed near
+                    the dance floor or entrance for easy visibility.</p>
+                <p>**Flow:** Use **multiple serving points** (e.g., two bars for 200+ guests) to minimize wait times.
+                </p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual live">🔥</div>
+            <div class="content">
+                <h3>Live Cooking/Interactive Stations</h3>
+                <p>**Design:** Requires a semi-circular or 'U' shaped counter to allow the chef space to cook and guests
+                    space to watch and order.</p>
+                <p>**Requirement:** Needs excellent **ventilation** (if indoors) and strong electrical points for
+                    induction or heating.</p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual dessert">🍰</div>
+            <div class="content">
+                <h3>Dessert & Coffee Counters</h3>
+                <p>**Design:** Often decorative tables or tiered displays. Should be placed in a separate, quiet corner,
+                    away from the main meal rush.</p>
+                <p>**Timing:** Open the dessert counter **30 minutes after** the main course to prevent guests from
+                    rushing the sweet items.</p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual vip">⭐</div>
+            <div class="content">
+                <h3>VIP/Reserved Service Points</h3>
+                <p>**Function:** A smaller, exclusive counter or a dedicated section of the main counter for VIP guests,
+                    speakers, or the host's family.</p>
+                <p>**Benefit:** Provides quick service and ensures guests of honor do not have to wait in the main
+                    queue.</p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual hightop">☕</div>
+            <div class="content">
+                <h3>High-Top & Satellite Counters</h3>
+                <p>**Use:** Small, circular counters placed throughout the venue, often used for distributing
+                    appetizers, welcome drinks, or a quick tea/coffee service.</p>
+                <p>**Benefit:** Encourages **mingling** and prevents crowding at the main food area.</p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual flow">➡️⬅️</div>
+            <div class="content">
+                <h3>Guest Flow & Traffic Management</h3>
+                <p>**Strategy:** Ensure a clear **entry and exit point** for every counter. Never place counters
+                    back-to-back, as this causes gridlock.</p>
+                <p>**Signage:** Clear, aesthetic signage (e.g., 'Starters', 'Main Course', 'Vegetarian') is essential
+                    for guiding guests.</p>
+            </div>
+        </div>
+
+        <div class="counter-box">
+            <div class="counter-visual clearance">🗑️</div>
+            <div class="content">
+                <h3>Used Plate Clearance Stations</h3>
+                <p>**Design:** Dedicated, inconspicuous tables or points for guests to drop off used plates/cutlery.
+                    Must be constantly manned by staff.</p>
+                <p>**Hygiene:** Crucial for maintaining a clean venue and preventing used dishes from piling up on guest
+                    tables.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Catering Service Counter & Station Design page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

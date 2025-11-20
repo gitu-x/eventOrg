@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Sound System Setup</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8eaf6;
+            /* Light purple-blue background */
+            color: #212121;
+        }
+
+        /* Header Styling */
+        .sound-header {
+            background: linear-gradient(135deg, #303f9f, #5c6bc0);
+            /* Deep indigo gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .sound-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Sound Component Container (Grid Layout) */
+        .sound-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Sound Component Box Styling */
+        .sound-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #303f9f;
+            /* Accent color */
+        }
+
+        .sound-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .sound-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #7986cb;
+            /* Lighter indigo */
+            border-bottom: 3px solid #303f9f;
+        }
+
+        .sound-visual.mics {
+            background-color: #4db6ac;
+        }
+
+        /* Teal */
+        .sound-visual.speakers {
+            background-color: #ffb74d;
+        }
+
+        /* Orange */
+        .sound-visual.mixer {
+            background-color: #64b5f6;
+        }
+
+        /* Light Blue */
+        .sound-visual.monitors {
+            background-color: #a1887f;
+        }
+
+        /* Brown */
+        .sound-visual.rec {
+            background-color: #e57373;
+        }
+
+        /* Red */
+        .sound-visual.stands {
+            background-color: #90a4ae;
+        }
+
+        /* Blue Gray */
+        .sound-visual.cables {
+            background-color: #7cb342;
+        }
+
+        /* Light Green */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #303f9f;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .sound-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sound-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="sound-header">
+        <div>
+            <p class="m1">Professional Event Sound System</p>
+            <p>High-quality audio solutions for clear speeches, dynamic music, and flawless event delivery.</p>
+        </div>
+    </section>
+
+    <div class="sound-container">
+
+        <div class="sound-box">
+            <div class="sound-visual mics">🎙️</div>
+            <div class="content">
+                <h3>Microphones (Mics)</h3>
+                <p>**Purpose:** To capture audio input clearly. Types include **Lavalier (collar mics)** for speakers,
+                    **Handheld** for Q&A, and **Condenser** for music/vocals.</p>
+                <p>**Consideration:** Wireless systems are essential for mobility and aesthetics.</p>
+            </div>
+        </div>
+
+        <div class="sound-box">
+            <div class="sound-

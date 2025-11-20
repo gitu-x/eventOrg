@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8; /* Light background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.feedback-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid #cce0f0; /* Subtle light blue border */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.question {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    font-size: 0.9rem;
+    color: #777777;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Star Rating Styles */
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    color: #ccc; /* Default star color (unfilled) */
+    cursor: pointer;
+}
+
+.rating-stars i:hover,
+.rating-stars i.rated {
+    color: #ffc107; /* Gold color for rated/hovered stars */
+}
+
+/* Text Area and Button */
+textarea {
+    width: 90%;
+    min-height: 80px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #4a67b2; /* Dark blue button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e5699;
+}
+
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.rating-stars i');
+    const submitBtn = document.getElementById('submitBtn');
+    let selectedRating = 0;
+
+    // --- Star Rating Logic ---
+    stars.forEach(star => {
+        // Highlight on hover
+        star.addEventListener('mouseover', () => {
+            resetStars();
+            highlightStars(star.dataset.rating);
+        });
+
+        // Revert to selected rating on mouse out
+        star.addEventListener('mouseout', () => {
+            resetStars();
+            highlightStars(selectedRating);
+        });
+
+        // Set the rating on click
+        star.addEventListener('click', () => {
+            selectedRating = parseInt(star.dataset.rating);
+            resetStars();
+            highlightStars(selectedRating);
+            console.log('Selected Rating:', selectedRating);
+        });
+    });
+
+    // Function to reset all stars to the default 'far' (outline)
+    function resetStars() {
+        stars.forEach(s => {
+            s.classList.remove('fas', 'rated');
+            s.classList.add('far');
+        });
+    }
+
+    // Function to highlight stars up to a certain rating
+    function highlightStars(rating) {
+        stars.forEach(s => {
+            if (parseInt(s.dataset.rating) <= rating) {
+                s.classList.remove('far');
+                s.classList.add('fas', 'rated'); // 'fas' is the solid star
+            }
+        });
+    }
+
+    // --- Form Submission Logic ---
+    submitBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const feedbackText = document.getElementById('feedbackText').value;
+
+        if (selectedRating === 0) {
+            alert('Please select a star rating.');
+            return;
+        }
+
+        // In a real application, you would send this data to a server
+        console.log('--- Feedback Submitted ---');
+        console.log('Rating:', selectedRating);
+        console.log('Text:', feedbackText);
+        
+        alert(`Thank you for your ${selectedRating}-star feedback!`);
+        
+        // Optional: Reset the form after submission
+        selectedRating = 0;
+        document.getElementById('feedbackText').value = '';
+        resetStars();
+    });
+});
+</script>
+
+</head>
+<body>
+    <div class="feedback-container">
+        <h2 class="title">We value your opinion.</h2>
+        <p class="question">How would you rate your overall experience?</p>
+
+        <div class="rating-stars" id="ratingStars">
+            <i class="far fa-star" data-rating="1"></i>
+            <i class="far fa-star" data-rating="2"></i>
+            <i class="far fa-star" data-rating="3"></i>
+            <i class="far fa-star" data-rating="4"></i>
+            <i class="far fa-star" data-rating="5"></i>
+        </div>
+        
+        <p class="prompt">Kindly take a moment to tell us what you think.</p>
+        <textarea id="feedbackText" placeholder="Enter your feedback here..."></textarea>
+        
+        <button id="submitBtn">Share my feedback</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

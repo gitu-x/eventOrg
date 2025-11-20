@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Decoration & Themes</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            /* Light blue-gray background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        .theme-header {
+            background: url('pt11.avif') center/cover no-repeat;
+            /* Professional blue gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Theme Box Styling */
+        .theme-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #4a69bd;
+            /* Accent color */
+        }
+
+        .theme-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .theme-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: #4a69bd;
+            background-color: #e3f2fd;
+            /* Very light blue background */
+            border-bottom: 3px solid #78909c;
+        }
+
+        .theme-visual.modern {
+            background-color: #f3e5f5;
+            color: #880e4f;
+        }
+
+        .theme-visual.rustic {
+            background-color: #fffde7;
+            color: #a1887f;
+        }
+
+        .theme-visual.bollywood {
+            background-color: #ffe0b2;
+            color: #ff6f00;
+        }
+
+        .theme-visual.futuristic {
+            background-color: #e0f7fa;
+            color: #00bcd4;
+        }
+
+        .theme-visual.vintage {
+            background-color: #fbe9e7;
+            color: #d84315;
+        }
+
+        .theme-visual.tropical {
+            background-color: #e8f5e9;
+            color: #43a047;
+        }
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #4a69bd;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Exquisite Event Themes & Decoration</p>
+            <p>Transform your occasion with our stunning and bespoke decoration packages. Select a theme that defines
+                your event.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="theme-box">
+            <div class="theme-visual royal">👑</div>
+            <div class="content">
+                <h3>Royal Grandeur</h3>
+                <p>**Description:** Luxurious decor featuring velvet fabrics, gold accents, crystal chandeliers, and
+                    deep jewel tones (maroon, sapphire blue). Perfect for weddings and high-end galas.</p>
+                <p>**Key Elements:** Gold-plated cutlery, elaborate floral centerpieces, draped ceiling.</p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual modern">📐</div>
+            <div class="content">
+                <h3>Modern Minimalist</h3>
+                <p>**Description:** Clean lines, monochrome or neutral color palettes (white, gray, black), and
+                    geometric shapes. Focuses on sophistication and open space.</p>
+                <p>**Key Elements:** Acrylic chairs, LED strip lighting, simple green foliage, mirrored surfaces.</p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual rustic">🌿</div>
+            <div class="content">
+                <h3>Rustic & Bohemian</h3>
+                <p>**Description:** Earthy, organic feel using natural materials like wood, burlap, and wildflowers.
+                    Focuses on a cozy, relaxed, and charming atmosphere.</p>
+                <p>**Key Elements:** Wooden barrels, fairy lights, macramé backdrops, pampas grass, warm Edison bulbs.
+                </p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual bollywood">✨</div>
+            <div class="content">
+                <h3>Indian Festive / Bollywood</h3>
+                <p>**Description:** Vibrant and high-energy decor with rich colors (red, orange, pink), traditional
+                    fabrics, and elaborate lighting. Perfect for Sangeet, Mehendi, and cultural events.</p>
+                <p>**Key Elements:** Marigold flowers, colorful drapes, ornate backdrops, Diya lighting, thematic props.
+                </p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual futuristic">🤖</div>
+            <div class="content">
+                <h3>Futuristic Neon</h3>
+                <p>**Description:** High-tech, dynamic design using bright, glowing colors and sharp, angular features.
+                    Creates an exciting, high-energy environment.</p>
+                <p>**Key Elements:** LED screens, neon lights, reflective surfaces, metallic textures, laser beams.</p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual vintage">🕰️</div>
+            <div class="content">
+                <h3>Vintage Glamour</h3>
+                <p>**Description:** Inspired by the 1920s Great Gatsby era, featuring feather boas, pearls, dark colors,
+                    and heavy textures. Creates a sophisticated, nostalgic feel.</p>
+                <p>**Key Elements:** Lace, antique furniture, pearl strands, old-style phonographs, black and gold
+                    palette.</p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual tropical">🌴</div>
+            <div class="content">
+                <h3>Tropical Paradise</h3>
+                <p>**Description:** Fun, vibrant, and relaxed setting using bright greens, blues, and sandy tones.
+                    Brings a holiday mood indoors or enhances an outdoor setting.</p>
+                <p>**Key Elements:** Palm leaves, tiki torches, bright floral arrangements, bamboo accents, sea-shell
+                    decorations.</p>
+            </div>
+        </div>
+
+        <div class="theme-box">
+            <div class="theme-visual forest">🌳</div>
+            <div class="content">
+                <h3>Enchanted Forest</h3>
+                <p>**Description:** Magical and whimsical setting featuring lush greenery, soft lighting, and natural
+                    elements. Ideal for fantasy-themed parties or grand celebrations.</p>
+                <p>**Key Elements:** String lights (fairy lights), moss, tree branches, artificial fog/smoke effects,
+                    ethereal lighting.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Decoration & Themes page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

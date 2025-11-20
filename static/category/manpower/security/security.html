@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Security Manpower & Protocol</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4c3;
+            /* Light lime/security theme background */
+            color: #3e2723;
+            /* Dark text */
+        }
+
+        /* Header Styling */
+        .security-header {
+            background: linear-gradient(135deg, #7cb342, #33691e);
+            /* Strong green gradient (Safety/Trust) */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .security-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Security Component Container (Grid Layout) */
+        .security-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Security Component Box Styling */
+        .security-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #7cb342;
+            /* Accent color */
+        }
+
+        .security-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .security-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #aed581;
+            /* Medium green accent */
+            border-bottom: 3px solid #7cb342;
+        }
+
+        .security-visual.guards {
+            background-color: #3f51b5;
+        }
+
+        /* Guards - Indigo */
+        .security-visual.access {
+            background-color: #ffb300;
+        }
+
+        /* Access Control - Amber */
+        .security-visual.vip {
+            background-color: #d81b60;
+        }
+
+        /* VIP Protection - Red */
+        .security-visual.crowd {
+            background-color: #00bcd4;
+        }
+
+        /* Crowd Control - Cyan */
+        .security-visual.briefing {
+            background-color: #8d6e63;
+        }
+
+        /* Briefing - Brown */
+        .security-visual.protocol {
+            background-color: #ab47bc;
+        }
+
+        /* Emergency - Purple */
+        .security-visual.bag {
+            background-color: #4db6ac;
+        }
+
+        /* Bag Checks - Teal */
+        .security-visual.asset {
+            background-color: #ff9800;
+        }
+
+        /* Asset Protection - Orange */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #33691e;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .security-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .security-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="security-header">
+        <div>
+            <p class="m1">Event Security Manpower & Protocol</p>
+            <p>Ensure the safety of guests, staff, and assets through professional security planning and deployment.</p>
+        </div>
+    </section>
+
+    <div class="security-container">
+
+        <div class="security-box">
+            <div class="security-visual guards">👮</div>
+            <div class="content">
+                <h3>Uniformed Security Guards</h3>
+                <p>**Role:** High-visibility deterrent and initial response team. Used for patrolling the perimeter,
+                    securing entry/exit points, and stationary posts.</p>
+                <p>**Requirement:** Must be licensed, well-briefed, and easily identifiable (uniforms/vests).</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual access">🎟️</div>
+            <div class="content">
+                <h3>Access Control & Ticketing</h3>
+                <p>**Focus:** Managing the flow of attendees at main entry gates. Involves checking tickets,
+                    invitations, or accreditation passes.</p>
+                <p>**Staffing:** Requires dedicated staff at every entry point to prevent unauthorized access and
+                    minimize queues.</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual vip">⭐</div>
+            <div class="content">
+                <h3>VIP & Personnel Protection</h3>
+                <p>**Role:** Close protection for keynote speakers, celebrities, or the host's family. Usually involves
+                    discrete, plain-clothes personnel.</p>
+                <p>**Planning:** Requires pre-event route and venue mapping to secure movement paths and private areas.
+                </p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual crowd">👥</div>
+            <div class="content">
+                <h3>Crowd Control & Flow Management</h3>
+                <p>**Focus:** Directing large groups, especially near stages, food counters, and high-traffic areas.
+                    Preventing bottlenecks and aggressive behavior.</p>
+                <p>**Technique:** Use barriers (ropes, barricades) and clear verbal communication to maintain order.</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual asset">📦</div>
+            <div class="content">
+                <h3>Asset Protection (Equipment)</h3>
+                <p>**Role:** Guarding valuable equipment like generators, expensive video/audio consoles, lighting
+                    desks, and sponsor booths.</p>
+                <p>**Placement:** Assign personnel to discreetly monitor the back-of-house (BOH) and tech areas where
+                    equipment is stored or operated.</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual bag">🎒</div>
+            <div class="content">
+                <h3>Bag Checks & Frisking</h3>
+                <p>**Protocol:** Mandatory checks for large-scale public events to prevent the entry of prohibited items
+                    (weapons, outside food/alcohol, banners).</p>
+                <p>**Requirement:** Must be clearly communicated to attendees. Requires separate male/female staff for
+                    personal frisking.</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual briefing">📢</div>
+            <div class="content">
+                <h3>Pre-Event Briefing & Communication</h3>
+                <p>**Crucial Step:** All security staff must attend a detailed briefing covering the event timeline,
+                    sensitive areas, chain of command, and specific security threats.</p>
+                <p>**Gear:** Ensure clear, operational communication via **two-way radios/walkie-talkies** for
+                    coordination.</p>
+            </div>
+        </div>
+
+        <div class="security-box">
+            <div class="security-visual protocol">🚨</div>
+            <div class="content">
+                <h3>Emergency Response Protocol</h3>
+                <p>**Plan:** Define clear procedures for all emergencies: fire, medical incident, unauthorized entry, or
+                    mass evacuation.</p>
+                <p>**Liaison:** Establish a direct line of communication with local police, fire department, and
+                    ambulance services.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Event Security Manpower & Protocol page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

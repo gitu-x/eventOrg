@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Production & Album Creation Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0fb;
+            /* Light lavender/purple background */
+            color: #4a148c;
+            /* Deep purple text */
+        }
+
+        /* Header Styling */
+        .edit-header {
+            background: linear-gradient(135deg, #7b1fa2, #4a148c);
+            /* Deep purple gradient */
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .edit-header p:not(.m1) {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Editing Service Container (Grid Layout) */
+        .edit-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* Editing Service Box Styling */
+        .edit-box {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #7b1fa2;
+            /* Accent color */
+        }
+
+        .edit-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon/Image Placeholder Styling */
+        .edit-visual {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: white;
+            background-color: #ba68c8;
+            /* Medium purple accent */
+            border-bottom: 3px solid #7b1fa2;
+        }
+
+        .edit-visual.photo-editing {
+            background-color: #26a69a;
+        }
+
+        /* Photo Editing - Teal */
+        .edit-visual.video-editing {
+            background-color: #ff7043;
+        }
+
+        /* Video Editing - Orange */
+        .edit-visual.album {
+            background-color: #fbc02d;
+            color: #333;
+        }
+
+        /* Album Design - Yellow */
+        .edit-visual.retouch {
+            background-color: #4fc3f7;
+        }
+
+        /* Retouching - Light Blue */
+        .edit-visual.delivery {
+            background-color: #9ccc65;
+        }
+
+        /* Delivery - Light Green */
+        .edit-visual.trailer {
+            background-color: #8d6e63;
+        }
+
+        /* Trailer/Highlight - Brown */
+        .edit-visual.selection {
+            background-color: #9575cd;
+        }
+
+        /* Selection/Review - Medium Purple */
+        .edit-visual.raw {
+            background-color: #795548;
+        }
+
+        /* Raw Data - Dark Brown */
+
+
+        /* Content Text Styling */
+        .content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #7b1fa2;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .edit-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .edit-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="edit-header">
+        <div>
+            <p class="m1">Post-Production, Editing & Album Services</p>
+            <p>Transform raw footage into timeless memories with expert editing and luxurious album design.</p>
+        </div>
+    </section>
+
+    <div class="edit-container">
+
+        <div class="edit-box">
+            <div class="edit-visual selection">📑</div>
+            <div class="content">
+                <h3>Image Selection & Review</h3>
+                <p>**Process:** The initial step where the client and editor collaboratively select the best images.
+                    Agree on the **final number of edited photos** upfront.</p>
+                <p>**Goal:** To filter out blurred, duplicate, or unflattering shots, ensuring only high-quality content
+                    proceeds.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual photo-editing">🎨</div>
+            <div class="content">
+                <h3>Photo Post-Processing (Color Grading)</h3>
+                <p>**Focus:** Applying technical and creative edits like **color correction, white balance adjustments,
+                    and exposure fixing** across all final images.</p>
+                <p>**Style Consistency:** Ensuring a uniform look and feel (style/filter) across the entire album or
+                    gallery.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual retouch">✨</div>
+            <div class="content">
+                <h3>Detailed Retouching (Skin & Background)</h3>
+                <p>**Service:** Focused editing on **key portrait shots**. Includes skin smoothing, removing temporary
+                    blemishes, eye/teeth whitening, and minor object removal from the background.</p>
+                <p>**Scope:** This is time-intensive; confirm how many photos qualify for 'detailed retouching'.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual video-editing">🎬</div>
+            <div class="content">
+                <h3>Full Video Editing & Sequencing</h3>
+                <p>**Process:** Cutting, arranging, and timing the video clips to create a smooth, continuous narrative.
+                    Includes adding transitions and titles.</p>
+                <p>**Length:** Final video length (e.g., 60 minutes for a wedding) should be agreed upon clearly
+                    beforehand.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual trailer">✂️</div>
+            <div class="content">
+                <h3>Highlight Reel / Trailer Creation</h3>
+                <p>**Format:** A short, dynamic video (usually 3-5 minutes) set to music, featuring the best moments.
+                    Ideal for social media and quick sharing.</p>
+                <p>**Delivery:** Often provided first, as a 'sneak peek' of the full video.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual album">🖼️</div>
+            <div class="content">
+                <h3>Custom Album Design & Printing</h3>
+                <p>**Design:** Layout and sequencing of images across the pages, often done collaboratively with the
+                    client for approval.</p>
+                <p>**Material:** Discuss options like **flush-mount, matte/gloss finish**, cover material
+                    (leather/acrylic), and number of pages.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual delivery">💻</div>
+            <div class="content">
+                <h3>Final Delivery & Storage</h3>
+                <p>**Method:** Delivery via secure online gallery (with download access), custom USB drive, or physical
+                    hard drive.</p>
+                <p>**Resolution:** Ensure delivery includes **High-Resolution (Print-Ready)** and **Web-Sized
+                    (Sharing)** versions of images.</p>
+            </div>
+        </div>
+
+        <div class="edit-box">
+            <div class="edit-visual raw">📦</div>
+            <div class="content">
+                <h3>Raw Footage & Data Management</h3>
+                <p>**Policy:** Clarify the policy regarding the **Raw Data** (unedited photos and videos). Raw files are
+                    large and usually require an additional fee for transfer and storage.</p>
+                <p>**Retention:** Confirm how long the studio will retain a backup of the final edited files.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Post-Production, Editing and Album Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural & Religious Festival Event Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf6f0;
+            /* Light festive background */
+            color: #333;
+        }
+
+        /* Color Palette: #ff9933 (Saffron/Orange), #c31432 (Deep Red/Maroon), #daa520 (Gold) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(195, 20, 50, 0.75), rgba(195, 20, 50, 0.75)), url('festival-celebration-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a vibrant festival image */
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.45);
+        }
+
+        .m1 {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff9933;
+            /* Saffron text */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 20px;
+            max-width: 850px;
+            margin: 15px auto 0;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 70px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 5px solid #c31432;
+            /* Deep Red accent */
+        }
+
+        .service-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5em;
+            color: #ff9933;
+            /* Saffron icon color */
+            background-color: #fff0e6;
+            /* Light orange background */
+            border-bottom: 2px solid #daa520;
+            /* Gold border */
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #c31432;
+            /* Heading Color */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .m1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Cultural & Religious Events: Celebration Planning Services</p>
+            <p>From Diwali to Christmas, we manage all aspects of festival celebrations, honoring tradition and
+                community spirit with grandeur.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue & Custom Traditional Setup</h3>
+                <p><strong>Description:</strong> Securing a suitable location and customizing the setup to reflect the
+                    specific cultural or religious theme.</p>
+                <p><strong>Key Elements:</strong> Venue booking (community hall, open ground, temple/church facility),
+                    Seating and flow arrangement, **Specific festival theme and colour setup**, Stage/Altar/Display area
+                    design.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>Functional A/V & Lighting</h3>
+                <p><strong>Description:</strong> Managing sound for traditional music, hymns, speeches, and festive
+                    lighting to set the mood.</p>
+                <p><strong>Key Elements:</strong> Sound system (microphones, speakers for bhajans/carols/sermons),
+                    **Festive and ambient lighting setup** (Diya/LED/Fairylights), Projector for live feed or visuals,
+                    Power backup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📸</div>
+            <div class="content">
+                <h3>Community Coverage & Archival</h3>
+                <p><strong>Description:</strong> Capturing the communal spirit and cultural performances for social
+                    media sharing and community archives.</p>
+                <p><strong>Key Elements:</strong> Photography & videography, Live streaming (for distant
+                    relatives/community members), Editing of event highlights, Album creation.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🍽️</div>
+            <div class="content">
+                <h3>Traditional Festive Catering</h3>
+                <p><strong>Description:</strong> Planning and execution of traditional, authentic cuisine and sweets
+                    specific to the celebration.</p>
+                <p><strong>Key Elements:</strong> **Custom menu planning for specific festival food** (mithai, langar,
+                    festive dinner), Professional waiter staff / serving counters, Crockery & table setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪔</div>
+            <div class="content">
+                <h3>Cultural Decor & Elements</h3>
+                <p><strong>Description:</strong> Provision of specific items, decorative elements, and culturally
+                    appropriate furniture to enhance the sanctity and atmosphere.</p>
+                <p><strong>Key Elements:</strong> Traditional seating/mats, Carpets, **Floral arrangements (Genda Phool,
+                    Roses) & fabric decoration**, Specific décor items (e.g., Diya setup, Christmas tree, Mandap/Altar
+                    decor).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Staff & Volunteer Coordination</h3>
+                <p><strong>Description:</strong> Coordinating volunteers and staff for crowd control, donation handling,
+                    and general assistance.</p>
+                <p><strong>Key Elements:</strong> Security guards / Bouncers, **Ushers / Volunteers for guidance**,
+                    Reception / Registration staff, Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🥁</div>
+            <div class="content">
+                <h3>Cultural Performances & Programs</h3>
+                <p><strong>Description:</strong> Arranging traditional music, dance, religious programs, and activities
+                    central to the celebration.</p>
+                <p><strong>Key Elements:</strong> **Traditional performers (Dhol, Bhajan group, Qawwali, Carolers)**,
+                    Anchor / Host for cultural programs, Games / interactive activities (e.g., Ravan Dahan, Holi colour
+                    zone).</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Crowd Logistics & Access</h3>
+                <p><strong>Description:</strong> Ensuring safe and managed entry/exit for a large number of community
+                    members and managing parking.</p>
+                <p><strong>Key Elements:</strong> Community transport & **crowd parking management**, Material movement
+                    (Prasad, gifts, décor), Entry / exit coordination.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Cultural & Religious Festival Celebration Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

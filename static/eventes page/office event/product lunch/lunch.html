@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Launch Event Planning & Services</title>
+
+    <style>
+        /* Basic Reset and Font Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            /* Light gray background */
+            color: #333;
+        }
+
+        /* Color Palette: #ff6f00 (Orange/Energy), #e65100 (Dark Orange), #444 (Dark Text) */
+
+        /* Header Styling */
+        .theme-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('product-launch-bg.jpg') center/cover no-repeat;
+            /* Placeholder for a dynamic, tech-focused background image */
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .m1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .theme-header p:not(.m1) {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Theme Container (Grid Layout) */
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            padding: 70px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 5px solid #ff6f00;
+            /* Launch accent color: Vibrant Orange */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon/Visual Styling */
+        .service-visual {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.2em;
+            color: #e65100;
+            background-color: #fff3e0;
+            /* Very light orange background */
+            border-bottom: 2px solid #ff9800;
+        }
+
+        /* Content Text Styling */
+        .content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #e65100;
+            /* Heading Color */
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .content strong {
+            color: #333;
+            font-weight: 700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .theme-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .theme-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .m1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="theme-header">
+        <div>
+            <p class="m1">Product Launch: Design, Technology & Buzz</p>
+            <p>Craft a memorable launch event that captivates media, partners, and customers for maximum impact.</p>
+        </div>
+    </section>
+
+    <div class="theme-container">
+
+        <div class="service-box">
+            <div class="service-visual">🏠</div>
+            <div class="content">
+                <h3>Venue & Presentation Setup</h3>
+                <p><strong>Description:</strong> Securing a cutting-edge venue and designing the space for product
+                    demonstrations and keynotes.</p>
+                <p><strong>Key Elements:</strong> Venue booking (innovation hubs, theaters, conference halls),
+                    Seating arrangements, Brand/Theme setup, Stage design / Product showcase backdrop.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">💡</div>
+            <div class="content">
+                <h3>High-Impact A/V & Tech</h3>
+                <p><strong>Description:</strong> Advanced audio-visual support critical for seamless keynotes and
+                    product
+                    reveal moments.</p>
+                <p><strong>Key Elements:</strong> Sound system (professional mic, speakers, digital mixer), Lighting
+                    setup (dynamic, mood, stage effects), Projector / **Giant LED screens** / Display panels, Power
+                    backup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">📰</div>
+            <div class="content">
+                <h3>Press & Media Coverage</h3>
+                <p><strong>Description:</strong> Generating hype and professional documentation for press releases,
+                    social media, and marketing assets.</p>
+                <p><strong>Key Elements:</strong> Photography & videography (event highlights, product demos),
+                    **Live streaming** / High-quality broadcast, Editing & post-production of launch video assets.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🥂</div>
+            <div class="content">
+                <h3>Premium F&B Experience</h3>
+                <p><strong>Description:</strong> Planning high-quality catering and beverage service for VIPs, media,
+                    and attendees.</p>
+                <p><strong>Key Elements:</strong> **Custom Food & beverage planning** (themed menus), Professional
+                    waiter
+                    staff / serving counters, Bar/Coffee setup.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🪑</div>
+            <div class="content">
+                <h3>Custom Branding & Décor</h3>
+                <p><strong>Description:</strong> Use of furniture and décor to reinforce brand identity and create a
+                    dynamic, experiential environment.</p>
+                <p><strong>Key Elements:</strong> Lounge seating, tables, carpet, Stage and **demo zone creation**,
+                    **Theme-based décor & brand signage**.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🧑‍💼</div>
+            <div class="content">
+                <h3>Guest Experience Management</h3>
+                <p><strong>Description:</strong> Courteous and knowledgeable staff focused on media and VIP handling,
+                    registration, and overall guest flow.</p>
+                <p><strong>Key Elements:</strong> Security guards, **Brand Ambassadors / Product Demonstrators**,
+                    Reception / Registration staff, Cleaners & maintenance.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🎤</div>
+            <div class="content">
+                <h3>Host & Keynote Support</h3>
+                <p><strong>Description:</strong> Arranging professional hosts or keynote speakers to elevate the event's
+                    energy and message delivery.</p>
+                <p><strong>Key Elements:</strong> Professional Host / Anchor (for stage flow), Keynote speaker
+                    management,
+                    **Background/Dynamic music**.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-visual">🚗</div>
+            <div class="content">
+                <h3>Logistics & Access Control</h3>
+                <p><strong>Description:</strong> Managing the complex movement of product samples, materials, and
+                    high-profile
+                    guests.</p>
+                <p><strong>Key Elements:</strong> Guest transport & **VIP parking management**, Product/Material
+                    movement
+                    & security, Entry / exit coordination & access control.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Product Launch Event Planning & Services page loaded successfully.");
+        });
+    </script>
+
+</body>
+
+</html>

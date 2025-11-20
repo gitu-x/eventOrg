@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Organization - Home</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Dropdown Base */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+    .dropdown-content li {
+      position: relative;
+    }
+
+    .dropdown-content li a {
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-shadow: 0 0 10px #228DFF;
+    }
+
+    .dropdown-content li a:hover {
+      background: #444;
+      color: #ff9800;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover>.dropdown-content {
+      display: block;
+    }
+
+    /* Submenu (level 2) - This part seems unused in the HTML structure you provided, but kept for completeness */
+    .sub-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: #333;
+      min-width: 230px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+
+    .dropdown-content li:hover>.sub-dropdown-content {
+      display: block;
+    }
+
+    /* Hero Section - Height Adjusted for Auto-Adjustment */
+    .hero {
+      background: url('pt2.jpg') center/cover no-repeat;
+      min-height: 80vh;
+      /* Minimum height ensures visibility */
+      height: auto;
+      /* Allows height to adjust based on content */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px;
+      /* Added padding for better look on small content */
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    .hero button {
+      background: #ff9800;
+      border: none;
+      padding: 12px 25px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e68900;
+    }
+
+    /* Upcoming Events */
+    .events {
+      padding: 60px 40px;
+      background: #fff;
+    }
+
+    .events h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .event {
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+    }
+
+    .event img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .event-content {
+      padding: 15px;
+    }
+
+    .event-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .event-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* About Section - Height Adjusted for Auto-Adjustment */
+    .about {
+      background: url('pt6.jpg') center/cover no-repeat;
+      min-height: 80vh;
+      /* Minimum height ensures visibility */
+      height: auto;
+      /* Allows height to adjust based on content */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px;
+      /* Added padding for better look on small content */
+    }
+
+    .about img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 500px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+
+    }
+
+    .about-text h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>EventOrg</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Events</a>
+          <ul class="dropdown-content">
+            <li class="dropdown"><a href="./eventes page/social event/wendding/wending.html">Wedding</a></li>
+            <li class="dropdown"><a
+                href="./eventes page/social event/engagement/sangeet/mehdi/sangeet.html">Engagement</a></li>
+            <li class="dropdown"><a href="./eventes page/social event/birthaday party/birthday.html">Birthday Party</a>
+            </li>
+            <li class="dropdown"><a href="./eventes page/social event/baby sower/baby.html">Baby Shower</a></li>
+            <li class="dropdown"><a href="./eventes page/social event/aniversery/aniversery.html">Anniversary
+                Celebration</a></li>
+            <li class="dropdown"><a href="./eventes page/social event/farewall party/farewal.html">Farewell Party</a>
+            <li class="dropdown"><a href="./eventes page/office event/annual metting/annual.html">Annual Meeting</a>
+            </li>
+            <li class="dropdown"><a href="./eventes page/office event/product lunch/lunch.html">Product Launch</a></li>
+            <li class="dropdown"><a
+                href="./eventes page/office event/seminor/seminar.html">Seminar,Conference,Workshop</a></li>
+            <li class="dropdown"><a href="./eventes page/office event/award chear money/chearmoney.html">Award
+                Ceremony</a></li>
+            <li class="dropdown"><a href="./eventes page/office event/company anniversy/company.html">Company
+                Anniversary Celebration</a></li>
+            <li class="dropdown"><a href="./eventes page/office event/trainning program/trainning.html">Training
+                Program</a></li>
+            <li class="dropdown"><a href="./eventes page/culturer event/festiwal celibration/festiwal.html">Festival
+                Celebration</a></li>
+            <li class="dropdown"><a href="./eventes page/culturer event/school/school.html">School,College Annual
+                Function</a></li>
+            <li><a href="./eventes page/music/music.html">Music Concert</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="#">Category</a>
+          <ul class="dropdown-content">
+            <li><a href="./category/venue setup/hotels venue/venue_booking.html">Venue booking</a></li>
+            <li><a href="./category/venue setup/setting/settingar.html">Seating arrangement</a></li>
+            <li><a href="./category/venue setup/decoration/deco.html">Decoration & theme setup</a></li>
+            <li><a href="./category/venue setup/stage/stage.html">Stage design</a></li>
+            <li><a href="./category/technical & infrastructure/sound/sound.html">Sound system</a></li>
+            <li><a href="./category/technical & infrastructure/lighting/light.html">Lighting setup</a></li>
+            <li><a href="./category/technical & infrastructure/display/display.html">Projector / Display</a></li>
+            <li><a href="./category/technical & infrastructure/power backup/power.html">Power backup</a></li>
+            <li><a href="./category/media/photography/photo.html">Photography</a></li>
+            <li><a href="./category/media/drone/drone.html">Drone shoot</a></li>
+            <li><a href="./category/media/album/album.html">Editing & album</a></li>
+            <li><a href="./category/catrin service/Food & beverages/food.html">Food & beverages</a></li>
+            <li><a href="./category/catrin service/service counter/service.html">Serving counters</a></li>
+            <li><a href="./category/catrin service/cokrey/cockrey.html">Crockery setup</a></li>
+            <li><a href="./category/manpower/security/security.html">Security</a></li>
+            <li><a href="./category/manpower/users(manpower)/users.html">Ushers Manpower</a></li>
+            <li><a href="./category/Entertainment/dj & host/dj.html">DJ / Host</a></li>
+            <li><a href="./category/Entertainment/performance/performance.html">Performers</a></li>
+            <li><a href="./category/transport/guest transport/gues.html">Guest transport</a></li>
+            <li><a href="./category/transport/material movement/material.html">Material movement</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="./profile/login.html">Profile</a>
+
+        </li>
+
+        <li><a href="./about/aboutfinal.html">About</a></li>
+        <li><a href="./feed.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Welcome to EventOrg</h2>
+      <p>Your trusted partner for amazing event experiences.</p>
+      <button>Explore Events</button>
+    </div>
+  </section>
+
+  <section class="events">
+    <h2>Service Availability</h2>
+    <div class="event-grid">
+      <div class="event">
+        <img src="pt3.jpg" alt="Music Fest">
+        <div class="event-content">
+          <h3>Music / DJ service </h3>
+          <p>Join us for an unforgettable night of live performances and fun.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="pt4.jpg" alt="Catering">
+        <div class="event-content">
+          <h3>Catering service</h3>
+          <p>Delicious food and impeccable service for every occasion.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="pt5.jpg" alt="Decoration">
+        <div class="event-content">
+          <h3>Balloon Decoration Service</h3>
+          <p>Creative balloon décor to make your events truly festive.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="pt7.jpg" alt="Photography">
+        <div class="event-content">
+          <h3>Camera & Photography Service</h3>
+          <p>Capture every moment with professional cameras and crew.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>About EventOrg</h2>
+      <p>We are a professional event management company dedicated to making your celebrations, conferences, and
+        functions extraordinary. With years of experience, we handle everything from planning to execution flawlessly.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 EventOrg | Designed by gitu.x</p>
+  </footer>
+
+</body>
+
+</html>
